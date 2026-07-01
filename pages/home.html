@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Organizer</title>
+ <link rel="stylesheet" href="/assets/css/output.css">
+ <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>body { font-family: 'Outfit', sans-serif; }</style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed top-0 z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 w-full">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <a href="/" class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-violet-600 text-white flex items-center justify-center font-bold">
+          <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+        </div>
+         <span class=" font-black bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">Home Organizer</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <!-- Home Dropdown -->
+<div class="relative inline-block group">
+
+  <!-- Trigger -->
+  <button class="flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500 text-black">
+    Home
+    <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+  </button>
+
+  <!-- Dropdown -->
+  <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-slate-800 shadow-lg rounded-xl
+              opacity-0 invisible group-hover:opacity-100 group-hover:visible
+              transition-all duration-200">
+
+    <a href="/"
+       class="block px-4 py-3 hover:bg-violet-50 dark:hover:bg-slate-700 rounded-t-xl">
+      Home 1
+    </a>
+
+    <a href="/pages/home.html"
+       class="block px-4 py-3 hover:bg-violet-50 dark:hover:bg-slate-700 rounded-b-xl">
+      Home 2
+    </a>
+
+  </div>
+</div>
+        <a href="/pages/about.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">About</a>
+        <a href="/pages/service.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Services</a>
+        <a href="/pages/gallery.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Gallery</a>
+        
+        <a href="/pages/contact.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Contact</a>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <button id="themeToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-180 transition">🌙</button>
+        <button id="rtlToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-[360deg] transition">⇄</button>
+        <a href="/pages/login.html" class="px-5 py-2 rounded-xl bg-gradient-to-r
+                              from-violet-600
+                              to-purple-600
+                              text-white font-semibold
+                              shadow-xl shadow-violet-500/30
+                              hover:scale-105
+                              transition-all">Login</a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">
+        ☰
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden absolute top-16 left-0 w-full z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 px-6 py-6 flex flex-col gap-4 shadow-xl">
+  
+ <!-- HOME BUTTON -->
+<button id="homeToggle"
+  class="block w-full text-left px-4 py-2 rounded-full bg-violet-500 text-white">
+  Home
+</button>
+
+<!-- DROPDOWN -->
+<div id="homeMenu" class="hidden mt-2 ml-4 space-y-1">
+
+  <a href="/"
+     class="block px-4 py-2 text-slate-700 dark:text-slate-200 hover:bg-violet-50 dark:hover:bg-slate-700 rounded-lg">
+    Home 1
+  </a>
+
+  <a href="/pages/home.html"
+     class="block px-4 py-2 text-slate-700 dark:text-slate-200 hover:bg-violet-50 dark:hover:bg-slate-700 rounded-lg">
+    Home 2
+  </a>
+
+</div>
+  <a href="/pages/about.html" class="block py-2 text-slate-700 dark:text-violet-200">About</a>
+  <a href="/pages/service.html" class="block py-2 text-slate-700 dark:text-violet-200">Services</a>
+  <a href="/pages/gallery.html" class="block py-2 text-slate-700 dark:text-violet-200">Gallery</a>
+
+  <a href="/pages/contact.html" class="block py-2 text-slate-700 dark:text-violet-200">Contact</a>
+  
+  <div class="flex items-center gap-4 pt-4 border-t border-violet-500/10">
+    <button id="themeTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">Theme</button>
+    <button id="rtlTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">RTL</button>
+  </div>
+  
+  <a href="/pages/login" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold">Login</a>
+</div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<main>
+<section id="home" class="relative overflow-hidden bg-slate-50 dark:bg-slate-950 py-24">
+
+  <!-- Background Glow -->
+  <div class="absolute -top-40 -left-40 w-96 h-96 bg-violet-300 blur-3xl opacity-30 rounded-full"></div>
+  <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-fuchsia-300 blur-3xl opacity-30 rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+
+    <!-- LEFT CONTENT -->
+    <div>
+
+      <!-- Badge -->
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full
+                   bg-white/70 dark:bg-white/10 backdrop-blur
+                   border border-slate-200 dark:border-white/10 text-sm">
+        🌿 Premium Home Organization Services
+      </span>
+
+      <!-- Heading -->
+      <h1 class="mt-5 text-4xl md:text-6xl font-black leading-tight text-slate-900 dark:text-white">
+        Transform Your Home Into a
+        <span class="bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+  Clean, Modern & Organized Space
+</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-5 text-slate-600 dark:text-slate-300 text-lg">
+        We design, declutter, and optimize your living space with premium home organization solutions tailored for your lifestyle.
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#services"
+           class="px-6 py-3 rounded-xl  bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400  hover:bg-violet-700 transition">
+          🚀 Get Started
+        </a>
+
+        <a href="#how"
+           class="px-6 py-3 border border-slate-300 dark:border-white/20 rounded-xl hover:bg-white/50 dark:hover:bg-white/10 transition">
+          ▶ How It Works
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-10 grid grid-cols-3 gap-4">
+
+        <div class="p-3">
+          <h3 class="text-2xl font-bold text-violet-600">500+</h3>
+          <p class="text-sm text-slate-500">Homes Organized</p>
+        </div>
+
+        <div class="p-3">
+          <h3 class="text-2xl font-bold text-violet-600">98%</h3>
+          <p class="text-sm text-slate-500">Client Satisfaction</p>
+        </div>
+
+        <div class="p-3">
+          <h3 class="text-2xl font-bold text-violet-600">5★</h3>
+          <p class="text-sm text-slate-500">Average Rating</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="relative">
+
+      <img
+        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+        class="rounded-3xl shadow-2xl w-full object-cover">
+
+      <!-- Floating Card -->
+      <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-xl border border-slate-200 dark:border-white/10">
+        <p class="text-sm font-semibold">✨ Premium Setup</p>
+        <p class="text-xs text-slate-500">Smart space optimization</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section id="services" class="py-24 bg-white dark:bg-slate-900">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">
+        Our Premium 
+         <span class="bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">Services</span>
+      </h2>
+      <p class="mt-3 text-slate-500">
+        Everything you need to transform and organize your home
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="group p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:shadow-xl transition bg-white dark:bg-slate-800">
+        <div class="text-3xl">🍽️</div>
+        <h3 class="mt-4 font-semibold text-lg">Kitchen Organization</h3>
+        <p class="text-sm text-slate-500 mt-2">
+          Smart layout, storage optimization, and clean kitchen setup.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:shadow-xl transition bg-white dark:bg-slate-800">
+        <div class="text-3xl">👗</div>
+        <h3 class="mt-4 font-semibold text-lg">Closet Setup</h3>
+        <p class="text-sm text-slate-500 mt-2">
+          Minimal, aesthetic wardrobe organization system.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:shadow-xl transition bg-white dark:bg-slate-800">
+        <div class="text-3xl">🏠</div>
+        <h3 class="mt-4 font-semibold text-lg">Full Home Declutter</h3>
+        <p class="text-sm text-slate-500 mt-2">
+          Complete home transformation with professional planning.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:shadow-xl transition bg-white dark:bg-slate-800">
+        <div class="text-3xl">📦</div>
+        <h3 class="mt-4 font-semibold text-lg">Storage Optimization</h3>
+        <p class="text-sm text-slate-500 mt-2">
+          Maximize space using smart storage solutions.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="group p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:shadow-xl transition bg-white dark:bg-slate-800">
+        <div class="text-3xl">🛋️</div>
+        <h3 class="mt-4 font-semibold text-lg">Living Room Setup</h3>
+        <p class="text-sm text-slate-500 mt-2">
+          Aesthetic and functional living space design.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="group p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:shadow-xl transition bg-white dark:bg-slate-800">
+        <div class="text-3xl">🧹</div>
+        <h3 class="mt-4 font-semibold text-lg">Deep Cleaning Setup</h3>
+        <p class="text-sm text-slate-500 mt-2">
+          Professional deep cleaning and space reset service.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="py-24 bg-slate-50 dark:bg-slate-950">
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT IMAGE -->
+    <div class="relative">
+
+      <img
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+        class="rounded-3xl shadow-2xl">
+
+      <!-- Floating badge -->
+      <div class="absolute top-6 left-6 bg-white dark:bg-slate-900 px-4 py-2 rounded-xl shadow border border-slate-200 dark:border-white/10">
+        ⭐ Trusted by 500+ Homes
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div>
+
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">
+        Why Choose
+         <span class="bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">Us?</span>
+      </h2>
+
+      <p class="mt-4 text-slate-500">
+        We don’t just organize homes — we redesign your lifestyle with premium space planning.
+      </p>
+
+      <!-- Points -->
+      <div class="mt-8 space-y-5">
+
+        <div class="flex gap-3">
+          <span class="text-violet-600 text-xl">✔</span>
+          <div>
+            <h3 class="font-semibold">Expert Home Designers</h3>
+            <p class="text-sm text-slate-500">Professional team with years of experience.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <span class="text-violet-600 text-xl">✔</span>
+          <div>
+            <h3 class="font-semibold">Fast & Clean Execution</h3>
+            <p class="text-sm text-slate-500">We complete projects quickly without mess.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <span class="text-violet-600 text-xl">✔</span>
+          <div>
+            <h3 class="font-semibold">Premium Quality Finish</h3>
+            <p class="text-sm text-slate-500">Modern, aesthetic and long-lasting setup.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <span class="text-violet-600 text-xl">✔</span>
+          <div>
+            <h3 class="font-semibold">Affordable Packages</h3>
+            <p class="text-sm text-slate-500">Premium service at budget-friendly pricing.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-8">
+        <a href="#contact"
+           class="inline-block px-6 py-3 bg-violet-600 text-white rounded-xl hover:bg-violet-700">
+          Book Free Consultation
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="py-24 bg-white dark:bg-slate-900">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">
+        Before & After 
+         <span class="bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">Transformations</span>
+      </h2>
+      <p class="mt-3 text-slate-500">
+        See the real difference our premium home organization makes
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-sm">
+
+        <div class="grid grid-cols-2">
+
+          <!-- BEFORE -->
+          <div>
+            <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11"
+                 class="h-64 w-full object-cover">
+            <div class="text-center py-2 text-sm bg-red-100 text-red-600">
+              Before
+            </div>
+          </div>
+
+          <!-- AFTER -->
+          <div>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                 class="h-64 w-full object-cover">
+            <div class="text-center py-2 text-sm bg-green-100 text-green-600">
+              After
+            </div>
+          </div>
+
+        </div>
+
+        <div class="p-4">
+          <h3 class="font-semibold">Kitchen Transformation</h3>
+          <p class="text-sm text-slate-500">Complete declutter + smart storage setup</p>
+        </div>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-sm">
+
+        <div class="grid grid-cols-2">
+
+          <div>
+            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf"
+                 class="h-64 w-full object-cover">
+            <div class="text-center py-2 text-sm bg-red-100 text-red-600">
+              Before
+            </div>
+          </div>
+
+          <div>
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+                 class="h-64 w-full object-cover">
+            <div class="text-center py-2 text-sm bg-green-100 text-green-600">
+              After
+            </div>
+          </div>
+
+        </div>
+
+        <div class="p-4">
+          <h3 class="font-semibold">Living Room Setup</h3>
+          <p class="text-sm text-slate-500">Modern aesthetic space redesign</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+  <!-- Decorative background elements -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-500/10 dark:bg-violet-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+  <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-fuchsia-500/10 dark:bg-fuchsia-600/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <span class="inline-block py-1 px-3 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-semibold mb-4">Client Stories</span>
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">
+        What Our 
+         <span class="bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">Clients</span> Say
+      </h2>
+      <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+        Don't just take our word for it. Hear from homeowners whose lives have been transformed by our decluttering systems.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="p-8 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative group">
+        <div class="absolute top-6 right-6 text-violet-200 dark:text-violet-900 text-5xl font-serif leading-none opacity-50 group-hover:text-violet-300 dark:group-hover:text-violet-800 transition-colors">"</div>
+        <div class="flex items-center gap-4 mb-6 relative z-10">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Priya S" class="w-14 h-14 rounded-full object-cover border-2 border-white dark:border-slate-800 shadow-md">
+          <div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Priya S.</h3>
+            <p class="text-sm text-slate-500 flex items-center gap-1">
+              <i class="fa-solid fa-location-dot text-violet-500 text-xs"></i> Chennai
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-1 mb-4 text-yellow-400 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed relative z-10">
+          “My kitchen was a complete disaster zone. The team came in, designed a beautiful acrylic and bamboo storage system, and transformed it into a luxury space. Cooking is actually fun again!”
+        </p>
+        <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+          <i class="fa-solid fa-circle-check"></i> Verified Client • Kitchen Setup
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="p-8 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative group">
+        <div class="absolute top-6 right-6 text-pink-200 dark:text-pink-900 text-5xl font-serif leading-none opacity-50 group-hover:text-pink-300 dark:group-hover:text-pink-800 transition-colors">"</div>
+        <div class="flex items-center gap-4 mb-6 relative z-10">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Arun K" class="w-14 h-14 rounded-full object-cover border-2 border-white dark:border-slate-800 shadow-md">
+          <div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Arun K.</h3>
+            <p class="text-sm text-slate-500 flex items-center gap-1">
+              <i class="fa-solid fa-location-dot text-violet-500 text-xs"></i> Coimbatore
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-1 mb-4 text-yellow-400 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed relative z-10">
+          “Incredibly professional from start to finish. I hired them for a full home declutter before moving in. They optimized every closet and cabinet perfectly. Worth every single penny.”
+        </p>
+        <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+          <i class="fa-solid fa-circle-check"></i> Verified Client • Full Home
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="p-8 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative group">
+        <div class="absolute top-6 right-6 text-orange-200 dark:text-orange-900/50 text-5xl font-serif leading-none opacity-50 group-hover:text-orange-300 dark:group-hover:text-orange-800 transition-colors">"</div>
+        <div class="flex items-center gap-4 mb-6 relative z-10">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop" alt="Meena R" class="w-14 h-14 rounded-full object-cover border-2 border-white dark:border-slate-800 shadow-md">
+          <div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Meena R.</h3>
+            <p class="text-sm text-slate-500 flex items-center gap-1">
+              <i class="fa-solid fa-location-dot text-violet-500 text-xs"></i> Trichy
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-1 mb-4 text-yellow-400 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed relative z-10">
+          “I was overwhelmed by my master closet. They introduced me to velvet hangers and zonation. Now getting ready in the morning is a breeze. Highly recommended for busy professionals!”
+        </p>
+        <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+          <i class="fa-solid fa-circle-check"></i> Verified Client • Closet Setup
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="py-24 bg-white dark:bg-slate-900 relative">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <span class="inline-block py-1 px-3 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-semibold mb-4">Clear Pricing</span>
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">
+        Choose Your 
+        <span class="bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">Package</span>
+      </h2>
+      <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+        Transparent, upfront pricing with no hidden fees. Select the level of organization that fits your space and budget.
+      </p>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+
+      <!-- Basic -->
+      <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-white/10 hover:shadow-xl transition-shadow duration-300">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Basic Refresh</h3>
+        <p class="text-sm text-slate-500 mt-2">Perfect for tackling a single problem area.</p>
+        <div class="my-6">
+          <span class="text-4xl font-black text-slate-900 dark:text-white">₹10,000</span>
+        </div>
+        <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 mb-8">
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Single room setup</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Basic decluttering</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> 1-day rapid service</li>
+          <li class="flex items-center gap-3 opacity-50"><i class="fa-solid fa-xmark text-slate-400"></i> Custom storage systems</li>
+        </ul>
+        <a href="#contact" class="block w-full text-center px-6 py-3 rounded-xl font-semibold bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">
+          Book Basic
+        </a>
+      </div>
+
+      <!-- Popular -->
+      <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border-2 border-violet-500 shadow-2xl shadow-violet-500/20 relative md:-translate-y-4">
+        <!-- Badge -->
+        <div class="absolute -top-4 left-0 right-0 flex justify-center">
+          <span class="bg-gradient-to-r from-violet-500 to-purple-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide shadow-lg">
+            Most Popular
+          </span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Standard Flow</h3>
+        <p class="text-sm text-slate-500 mt-2">Ideal for apartments or multi-room organization.</p>
+        <div class="my-6">
+          <span class="text-4xl font-black text-violet-600 dark:text-violet-400">₹20,000</span>
+        </div>
+        <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 mb-8">
+          <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-check text-violet-500"></i> 2–3 rooms setup</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-violet-500"></i> Deep declutter & purge</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-violet-500"></i> Storage optimization</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-violet-500"></i> 2-day dedicated service</li>
+        </ul>
+        <a href="#contact" class="block w-full text-center px-6 py-3 rounded-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 text-white shadow-lg hover:shadow-violet-500/30 hover:scale-[1.02] transition-all">
+          Book Standard
+        </a>
+      </div>
+
+      <!-- Premium -->
+      <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-white/10 hover:shadow-xl transition-shadow duration-300">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Luxury Overhaul</h3>
+        <p class="text-sm text-slate-500 mt-2">Complete transformation for your entire home.</p>
+        <div class="my-6">
+          <span class="text-4xl font-black text-slate-900 dark:text-white">₹35,000</span>
+        </div>
+        <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300 mb-8">
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Full home transformation</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Interior space planning</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Luxury container setup</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> VIP priority scheduling</li>
+        </ul>
+        <a href="#contact" class="block w-full text-center px-6 py-3 rounded-xl font-semibold bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">
+          Book Premium
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-20 bg-gradient-to-r from-violet-600 to-fuchsia-600">
+
+  <div class="max-w-5xl mx-auto px-6 text-center">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold text-white">
+      Ready to Transform Your Home?
+    </h2>
+
+    <p class="mt-4 text-white/80 text-lg">
+      Book a free consultation today and get a premium home organization plan tailored for you.
+    </p>
+
+    <!-- Buttons -->
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+
+      <a href="#contact"
+         class="px-6 py-3 bg-white text-violet-700 font-semibold rounded-xl hover:bg-slate-100 transition">
+        🚀 Book Free Consultation
+      </a>
+
+      <a href="#pricing"
+         class="px-6 py-3 border border-white/50 text-white rounded-xl hover:bg-white/10 transition">
+        View Pricing
+      </a>
+
+    </div>
+
+    <!-- Small trust text -->
+    <p class="mt-6 text-white/70 text-sm">
+      No hidden charges • Fast response • Professional service
+    </p>
+
+  </div>
+
+</section>
+</main>
+<footer class="bg-slate-950 text-slate-300 pt-16 pb-8">
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+
+    <!-- Brand -->
+    <div>
+      
+       <a href="/" class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-violet-600 text-white flex items-center justify-center font-bold">
+          <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+        </div>
+         <span class=" font-black bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">Home Organizer</span>
+      </a>
+      <p class="mt-4 text-sm text-slate-400">
+        Premium home organization services to transform your living space into a clean, modern, and functional home.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-white">Home</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#how" class="hover:text-white">How It Works</a></li>
+        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Services</h3>
+      <ul class="space-y-2 text-sm">
+        <li>Kitchen Organization</li>
+        <li>Closet Setup</li>
+        <li>Home Declutter</li>
+        <li>Storage Optimization</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Contact</h3>
+      <ul class="space-y-2 text-sm">
+        <li>📧 support@homeorganizer.com</li>
+        <li>📞 +91 98765 43210</li>
+        <li>📍 Chennai, India</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-slate-500">
+    © 2026 HomeOrganizer. All rights reserved.
+  </div>
+
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="/assets/js/main.js"></script>
+<script>
+const items = document.querySelectorAll(".menu-item");
+
+items.forEach(item => {
+  item.addEventListener("click", function () {
+    items.forEach(i => i.classList.remove("bg-violet-100", "dark:bg-slate-600"));
+    this.classList.add("bg-violet-100", "dark:bg-slate-600");
+  });
+});
+</script>
+<script>
+const toggle = document.getElementById("homeToggle");
+const menu = document.getElementById("homeMenu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Client Dashboard - Home Organizer</title>
+<link rel="stylesheet" href="/assets/css/output.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>body { font-family: 'Outfit', sans-serif; }</style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+
+<!-- MOBILE HEADER -->
+<header class="lg:hidden fixed top-0 w-full z-40 h-16 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-white/10">
+    <div class="h-16 px-4 flex items-center justify-between">
+        <div class="flex items-center gap-3 flex-1 min-w-0">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center font-bold shrink-0">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+            <span class="font-bold text-sm sm:text-base text-slate-900 dark:text-white truncate">
+                Declutter Studio
+            </span>
+        </div>
+        <button id="mobileMenuBtn" class="shrink-0 w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- OVERLAY -->
+<div id="sidebarOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden lg:hidden"></div>
+
+<div class="flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="fixed top-16 lg:top-0 h-[calc(100vh-4rem)] lg:h-screen w-72 bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-white/10 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col">
+   
+        <button id="closeSidebar" class="lg:hidden absolute top-2 right-5 w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- LOGO -->
+        <div class="mt-6 h-20 px-6 flex items-center border-b border-slate-200 dark:border-white/10">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    <h2 class="font-black text-slate-900 dark:text-white">Declutter Studio</h2>
+                    <p class="text-xs text-slate-500">Client Dashboard</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- MENU -->
+        <nav class="flex-1 p-4 space-y-2 overflow-y-auto custom-scrollbar">
+            <a href="#overview" class="nav-link active flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500 text-white transition-all">
+                <i class="fa-solid fa-chart-pie w-5"></i> Overview & Progress
+            </a>
+            <a href="#upload" class="nav-link flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
+                <i class="fa-solid fa-camera w-5"></i> Upload Photos
+            </a>
+            <a href="#systems" class="nav-link flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
+                <i class="fa-solid fa-boxes-stacked w-5"></i> Org. Systems
+            </a>
+            <a href="#plans" class="nav-link flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
+                <i class="fa-solid fa-pen-ruler w-5"></i> Approve Plans
+            </a>
+            <a href="#consultations" class="nav-link flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
+                <i class="fa-solid fa-video w-5"></i> Consultations
+            </a>
+        </nav>
+
+        <!-- FOOTER -->
+        <div class="p-4 border-t border-slate-200 dark:border-white/10 space-y-2">
+            <button id="themeToggle" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white flex items-center gap-3 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+                <i class="fa-solid fa-moon"></i> Dark Mode
+            </button>
+            <div class="px-4 py-3 flex items-center gap-3">
+                <img src="https://ui-avatars.com/api/?name=Sarah+W&background=10b981&color=fff" class="w-10 h-10 rounded-full" alt="User">
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-bold text-slate-900 dark:text-white truncate">Sarah Wilson</p>
+                    <p class="text-xs text-slate-500 truncate">Premium Client</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 lg:ml-72 pt-16 lg:pt-0 p-6 min-h-screen">
+        
+        <!-- SECTION: OVERVIEW -->
+        <section id="overview" class="content-section block fade-in">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">Welcome back, Sarah!</h1>
+                    <p class="mt-2 text-slate-600 dark:text-slate-400">Here is the progress on your Kitchen & Closet transformation.</p>
+                </div>
+                <button class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold transition-colors shadow-lg shadow-emerald-500/30">
+                    Contact Organizer
+                </button>
+            </div>
+
+            <!-- Progress Tracker -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-white/10 shadow-sm mb-8">
+                <div class="flex justify-between items-end mb-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Overall Project Progress</h3>
+                    <span class="text-3xl font-black text-emerald-500">65%</span>
+                </div>
+                <div class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full w-[65%] transition-all duration-1000 ease-out"></div>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-100 dark:border-emerald-500/20">
+                        <div class="w-8 h-8 mx-auto bg-emerald-500 text-white rounded-full flex items-center justify-center mb-2"><i class="fa-solid fa-check"></i></div>
+                        <p class="text-sm font-semibold text-slate-900 dark:text-white">Consultation</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-100 dark:border-emerald-500/20">
+                        <div class="w-8 h-8 mx-auto bg-emerald-500 text-white rounded-full flex items-center justify-center mb-2"><i class="fa-solid fa-check"></i></div>
+                        <p class="text-sm font-semibold text-slate-900 dark:text-white">Plan Approved</p>
+                    </div>
+                    <div class="p-4 rounded-2xl border-2 border-dashed border-emerald-500 relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Current</div>
+                        <div class="w-8 h-8 mx-auto bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mb-2"><i class="fa-solid fa-spinner animate-spin"></i></div>
+                        <p class="text-sm font-semibold text-slate-900 dark:text-white">Organizing</p>
+                    </div>
+                    <div class="p-4 rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-800/50 opacity-50">
+                        <div class="w-8 h-8 mx-auto bg-slate-200 dark:bg-slate-700 text-slate-400 rounded-full flex items-center justify-center mb-2"><i class="fa-solid fa-lock"></i></div>
+                        <p class="text-sm font-semibold text-slate-900 dark:text-white">Final Reveal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Recent Updates</h3>
+            <div class="space-y-4">
+                <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-white/10 flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">New organizational systems delivered</h4>
+                        <p class="text-sm text-slate-500 mt-1">The acrylic drawer dividers and bamboo bins have arrived at your home.</p>
+                        <span class="text-xs text-slate-400 mt-2 block">Today at 10:30 AM</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-white/10 flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">Closet Layout Plan Updated</h4>
+                        <p class="text-sm text-slate-500 mt-1">We revised the closet layout based on your feedback.</p>
+                        <span class="text-xs text-slate-400 mt-2 block">Yesterday</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: UPLOAD PHOTOS -->
+        <section id="upload" class="content-section hidden fade-in">
+            <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Upload Room Photos</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">Share photos of your spaces so we can start designing your custom organization plan.</p>
+
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 border-2 border-dashed border-slate-300 dark:border-slate-700 text-center hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors cursor-pointer group mb-8">
+                <div class="w-16 h-16 mx-auto bg-slate-100 dark:bg-slate-800 text-slate-400 group-hover:text-emerald-500 group-hover:bg-emerald-50 dark:group-hover:bg-emerald-500/10 rounded-full flex items-center justify-center mb-4 transition-colors">
+                    <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Drag & Drop photos here</h3>
+                <p class="text-sm text-slate-500 mb-6">Supports JPG, PNG, HEIC up to 10MB each</p>
+                <button class="px-6 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
+                    Browse Files
+                </button>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Uploaded Photos (4)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group rounded-xl overflow-hidden aspect-square border border-slate-200 dark:border-white/10">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=600" class="w-full h-full object-cover" alt="Kitchen Mess">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                        <button class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-sm flex items-center justify-center"><i class="fa-solid fa-eye"></i></button>
+                        <button class="w-8 h-8 rounded-full bg-red-500/80 hover:bg-red-500 text-white backdrop-blur-sm flex items-center justify-center"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <span class="absolute bottom-2 left-2 text-xs font-medium bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm">Kitchen_1.jpg</span>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden aspect-square border border-slate-200 dark:border-white/10">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600" class="w-full h-full object-cover" alt="Kitchen Mess 2">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                        <button class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-sm flex items-center justify-center"><i class="fa-solid fa-eye"></i></button>
+                        <button class="w-8 h-8 rounded-full bg-red-500/80 hover:bg-red-500 text-white backdrop-blur-sm flex items-center justify-center"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <span class="absolute bottom-2 left-2 text-xs font-medium bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm">Kitchen_2.jpg</span>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden aspect-square border border-slate-200 dark:border-white/10">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=600" class="w-full h-full object-cover" alt="Closet">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                        <button class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-sm flex items-center justify-center"><i class="fa-solid fa-eye"></i></button>
+                        <button class="w-8 h-8 rounded-full bg-red-500/80 hover:bg-red-500 text-white backdrop-blur-sm flex items-center justify-center"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <span class="absolute bottom-2 left-2 text-xs font-medium bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm">Closet_Mess.heic</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ORG SYSTEMS -->
+        <section id="systems" class="content-section hidden fade-in">
+            <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Select Organizational Systems</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">Browse and select the storage styles and systems that fit your aesthetic.</p>
+
+            <!-- Filters -->
+            <div class="flex gap-2 mb-6 overflow-x-auto pb-2 custom-scrollbar">
+                <button class="px-4 py-2 rounded-full bg-emerald-500 text-white text-sm font-semibold whitespace-nowrap">All Systems</button>
+                <button class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-semibold whitespace-nowrap">Kitchen & Pantry</button>
+                <button class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-semibold whitespace-nowrap">Closet</button>
+                <button class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-semibold whitespace-nowrap">Minimalist Aesthetic</button>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- System Card -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1590725140246-200257321689?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Clear Acrylic Bins">
+                        <span class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-900 dark:text-white border border-slate-200 dark:border-white/10">Kitchen</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Clear Acrylic System</h3>
+                        <p class="text-sm text-slate-500 mt-2 mb-4 line-clamp-2">Perfect for pantries and fridges. Transparent bins make it easy to see inventory at a glance.</p>
+                        <button class="w-full py-2.5 rounded-xl border-2 border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-emerald-500 hover:text-white transition-colors">
+                            Select This System
+                        </button>
+                    </div>
+                </div>
+
+                <!-- System Card -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border-2 border-emerald-500 relative group shadow-sm">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Selected</div>
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Bamboo & Glass">
+                        <span class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-900 dark:text-white border border-slate-200 dark:border-white/10">Kitchen</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Bamboo & Glass Jars</h3>
+                        <p class="text-sm text-slate-500 mt-2 mb-4 line-clamp-2">Eco-friendly and aesthetically pleasing. Ideal for decanting dry goods and spices.</p>
+                        <button class="w-full py-2.5 rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400 font-semibold flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Selected
+                        </button>
+                    </div>
+                </div>
+
+                <!-- System Card -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Velvet Hangers">
+                        <span class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-900 dark:text-white border border-slate-200 dark:border-white/10">Closet</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Slim Velvet Hangers</h3>
+                        <p class="text-sm text-slate-500 mt-2 mb-4 line-clamp-2">Maximize closet space while keeping clothes secure. Creates a uniform, boutique look.</p>
+                        <button class="w-full py-2.5 rounded-xl border-2 border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-emerald-500 hover:text-white transition-colors">
+                            Select This System
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: APPROVE PLANS -->
+        <section id="plans" class="content-section hidden fade-in">
+            <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Approve Project Plans</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">Review the proposed layouts and mockups before we begin the physical organization.</p>
+
+            <div class="space-y-8">
+                <!-- Plan Item -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-sm">
+                    <div class="p-6 border-b border-slate-200 dark:border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div>
+                            <div class="flex items-center gap-3 mb-1">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Kitchen Pantry Layout</h3>
+                                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-400 text-xs font-bold">Needs Approval</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Version 2 • Uploaded yesterday</p>
+                        </div>
+                        <div class="flex gap-2 w-full sm:w-auto">
+                            <button class="flex-1 sm:flex-none px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-white rounded-xl text-sm font-semibold transition-colors">Request Change</button>
+                            <button class="flex-1 sm:flex-none px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl text-sm font-semibold transition-colors">Approve Plan</button>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50 dark:bg-slate-950/50">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wide">Current State</p>
+                                <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=800" class="w-full h-64 object-cover rounded-2xl border border-slate-200 dark:border-white/10" alt="Before">
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-2 uppercase tracking-wide">Proposed Organization</p>
+                                <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=800" class="w-full h-64 object-cover rounded-2xl border-2 border-emerald-500 shadow-lg shadow-emerald-500/20" alt="After Mockup">
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10">
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Organizer's Notes:</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">We will utilize the Bamboo & Glass jars for dry goods on the middle shelves (eye level). Heavy items will go in woven baskets on the bottom, and less frequently used items in acrylic bins up top.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Item (Approved) -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-sm opacity-75">
+                    <div class="p-6 border-b border-slate-200 dark:border-white/10 flex justify-between items-center">
+                        <div>
+                            <div class="flex items-center gap-3 mb-1">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Master Closet Zonation</h3>
+                                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400 text-xs font-bold flex items-center gap-1"><i class="fa-solid fa-check"></i> Approved</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Approved on Oct 12, 2023</p>
+                        </div>
+                        <button class="px-4 py-2 text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm font-semibold transition-colors">View Details <i class="fa-solid fa-chevron-down ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CONSULTATIONS -->
+        <section id="consultations" class="content-section hidden fade-in">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                <div>
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Virtual Consultations</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Schedule check-ins and video walkthroughs with your organizer.</p>
+                </div>
+                <button class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold transition-colors whitespace-nowrap">
+                    <i class="fa-solid fa-plus mr-2"></i>Book New Session
+                </button>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Upcoming Card -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Upcoming Sessions</h3>
+                    
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-white/10 shadow-sm flex flex-col sm:flex-row gap-6 items-start sm:items-center relative overflow-hidden">
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-emerald-500"></div>
+                        <div class="bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-100 dark:border-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-2xl p-4 text-center min-w-[100px]">
+                            <span class="block text-sm font-bold uppercase">Oct</span>
+                            <span class="block text-3xl font-black">24</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 uppercase">Video Call</span>
+                                <span class="text-sm font-semibold text-slate-500"><i class="fa-regular fa-clock mr-1"></i> 10:00 AM - 10:45 AM</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white">Kitchen Plan Review</h4>
+                            <p class="text-slate-500 text-sm mt-1">Final walkthrough of the pantry layout before implementation begins.</p>
+                        </div>
+                        <div class="w-full sm:w-auto">
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-video"></i> Join Call
+                            </button>
+                            <button class="w-full mt-2 text-sm text-slate-500 hover:text-red-500 font-medium transition-colors">Reschedule</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Widget (Simplified) -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Availability</h3>
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-white/10 shadow-sm">
+                        <div class="flex justify-between items-center mb-4">
+                            <button class="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400"><i class="fa-solid fa-chevron-left"></i></button>
+                            <h4 class="font-bold text-slate-900 dark:text-white">October 2023</h4>
+                            <button class="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1 text-center mb-2">
+                            <div class="text-xs font-semibold text-slate-400">S</div>
+                            <div class="text-xs font-semibold text-slate-400">M</div>
+                            <div class="text-xs font-semibold text-slate-400">T</div>
+                            <div class="text-xs font-semibold text-slate-400">W</div>
+                            <div class="text-xs font-semibold text-slate-400">T</div>
+                            <div class="text-xs font-semibold text-slate-400">F</div>
+                            <div class="text-xs font-semibold text-slate-400">S</div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1 text-center">
+                            <!-- Dummy days -->
+                            <div class="p-2 text-sm text-slate-300 dark:text-slate-600">1</div>
+                            <div class="p-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer">2</div>
+                            <div class="p-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer relative">3<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-emerald-500 rounded-full"></span></div>
+                            <div class="p-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer">4</div>
+                            <div class="p-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer">5</div>
+                            <div class="p-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer">6</div>
+                            <div class="p-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer">7</div>
+                            <!-- ... just a sample to look like a calendar ... -->
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200 dark:border-white/10 text-center">
+                            <p class="text-sm text-slate-500 mb-2">Available slots on selected date:</p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="px-3 py-1 rounded-full border border-slate-200 dark:border-white/10 text-xs hover:border-emerald-500 hover:text-emerald-500 cursor-pointer transition-colors">10:00 AM</span>
+                                <span class="px-3 py-1 rounded-full border border-slate-200 dark:border-white/10 text-xs hover:border-emerald-500 hover:text-emerald-500 cursor-pointer transition-colors">1:00 PM</span>
+                                <span class="px-3 py-1 rounded-full border border-slate-200 dark:border-white/10 text-xs hover:border-emerald-500 hover:text-emerald-500 cursor-pointer transition-colors">3:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<style>
+    .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(156, 163, 175, 0.5); border-radius: 20px; }
+</style>
+
+<script>
+// Sidebar Toggle
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("sidebarOverlay");
+const menuBtn = document.getElementById("mobileMenuBtn");
+const closeBtn = document.getElementById("closeSidebar");
+
+function openSidebar() {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+}
+
+function closeSidebarMenu() {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+}
+
+menuBtn.addEventListener("click", openSidebar);
+closeBtn.addEventListener("click", closeSidebarMenu);
+overlay.addEventListener("click", closeSidebarMenu);
+
+// Theme Toggle
+document.getElementById("themeToggle").addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+});
+
+// Simple Tab Navigation
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.content-section');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all links
+        navLinks.forEach(l => {
+            l.classList.remove('bg-emerald-500', 'text-white');
+            l.classList.add('text-slate-700', 'dark:text-slate-300');
+        });
+        
+        // Add active class to clicked link
+        link.classList.remove('text-slate-700', 'dark:text-slate-300');
+        link.classList.add('bg-emerald-500', 'text-white');
+        
+        // Hide all sections
+        sections.forEach(sec => sec.classList.add('hidden'));
+        
+        // Show target section
+        const targetId = link.getAttribute('href').substring(1);
+        document.getElementById(targetId).classList.remove('hidden');
+        
+        // Close sidebar on mobile after clicking
+        if(window.innerWidth < 1024) {
+            closeSidebarMenu();
+        }
+    });
+});
+</script>
+</body>
+</html>dy>
+</html>
+
+

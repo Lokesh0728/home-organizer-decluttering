@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Home Organizer Dashboard</title>
+<link rel="stylesheet" href="/assets/css/output.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>body { font-family: 'Outfit', sans-serif; }</style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950">
+
+<!-- MOBILE HEADER -->
+<header class="lg:hidden fixed  top-0 w-full z-40 h-16 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200 dark:border-white/10">
+   
+
+    <!-- Top Header -->
+<!-- Top Header -->
+<div class="h-16 px-4
+            flex items-center justify-between
+            bg-white dark:bg-slate-900
+            border-b border-slate-200
+            dark:border-white/10">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3 flex-1 min-w-0">
+
+        <div class="w-9 h-9 rounded-xl
+                    bg-gradient-to-r
+                    from-violet-600
+                    to-purple-600
+                    text-white
+                    flex items-center justify-center
+                    font-bold
+                    shrink-0">
+            H
+        </div>
+
+        <span class="font-bold
+                     text-sm sm:text-base
+                     text-slate-900
+                     dark:text-white
+                     truncate">
+            Home Organizer
+        </span>
+
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn"
+            class="lg:hidden
+                   shrink-0
+                   w-10 h-10
+                   rounded-xl
+                   bg-slate-100
+                   dark:bg-slate-800
+                   text-slate-700
+                   dark:text-white
+                   flex items-center justify-center
+                   hover:bg-slate-200
+                   dark:hover:bg-slate-700
+                   transition-all duration-300">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</div>
+
+</header>
+
+<!-- OVERLAY -->
+<div id="sidebarOverlay"
+     class="fixed inset-0
+            bg-black/50
+            backdrop-blur-sm
+            z-40
+            hidden
+            lg:hidden">
+</div>
+
+<div class="flex">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="fixed top-16 lg:top-0 h-[calc(100vh-4rem)] lg:h-screen w-72 bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-white/10 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col">
+   
+        <!-- CLOSE BUTTON -->
+        <button id="closeSidebar"
+                class="lg:hidden
+                       absolute top-2 right-5
+                       w-10 h-10
+                       rounded-xl
+                       bg-slate-100
+                       dark:bg-slate-800
+                       text-slate-700
+                       dark:text-white">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <!-- LOGO -->
+        <div class=" mt-6 h-20 px-6
+                    flex items-center
+                    border-b border-slate-200
+                    dark:border-white/10">
+
+            <a href="#"
+               class="flex items-center gap-3">
+
+                <div class=" w-10 h-10 rounded-xl
+                            bg-gradient-to-r
+                            from-violet-600
+                            to-purple-600
+                            text-white
+                            flex items-center justify-center
+                            font-bold">
+
+                    H
+
+                </div>
+
+                <div>
+
+                    <h2 class="font-black
+                               text-slate-900
+                               dark:text-white">
+
+                        Home Organizer
+
+                    </h2>
+
+                    <p class="text-xs text-slate-500">
+                        Admin Dashboard
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <!-- MENU -->
+        <nav class="flex-1 p-4 space-y-2">
+
+            <a href="dashboard.html"
+               class="flex items-center gap-3
+               px-4 py-3 rounded-2xl text-slate-700
+                      dark:text-slate-300
+                      hover:bg-slate-100
+                      dark:hover:bg-white/5">
+                      
+                <i class="fa-solid fa-chart-pie"></i>
+                Client Dashboard (Demo)
+
+            </a>
+
+            <a href="client.html"
+               class="flex items-center gap-3
+                      px-4 py-3 rounded-2xl
+                      bg-violet-600 text-white">
+
+                <i class="fa-solid fa-users"></i>
+                Clients
+            </a>
+
+            <a href="#"
+               class="flex items-center gap-3
+                      px-4 py-3 rounded-2xl
+                      text-slate-700
+                      dark:text-slate-300
+                      hover:bg-slate-100
+                      dark:hover:bg-white/5">
+
+                <i class="fa-solid fa-folder-open"></i>
+                Projects
+
+            </a>
+
+            <a href="#"
+               class="flex items-center gap-3
+                      px-4 py-3 rounded-2xl
+                      text-slate-700
+                      dark:text-slate-300
+                      hover:bg-slate-100
+                      dark:hover:bg-white/5">
+
+                <i class="fa-solid fa-calendar-check"></i>
+                Consultations
+
+            </a>
+
+
+
+            <a href="#"
+               class="flex items-center gap-3
+                      px-4 py-3 rounded-2xl
+                      text-slate-700
+                      dark:text-slate-300
+                      hover:bg-slate-100
+                      dark:hover:bg-white/5">
+
+                <i class="fa-solid fa-chart-line"></i>
+                Reports
+
+            </a>
+
+            <a href="#"
+               class="flex items-center gap-3
+                      px-4 py-3 rounded-2xl
+                      text-slate-700
+                      dark:text-slate-300
+                      hover:bg-slate-100
+                      dark:hover:bg-white/5">
+
+                <i class="fa-solid fa-gear"></i>
+                Settings
+
+            </a>
+
+        </nav>
+
+        <!-- FOOTER -->
+        <div class="p-4
+                    border-t border-slate-200
+                    dark:border-white/10">
+
+            <button id="themeToggle"
+                    class="w-full
+                           px-4 py-3
+                           rounded-2xl
+                           bg-slate-100
+                           dark:bg-slate-800
+                           text-slate-700
+                           dark:text-white
+                           flex items-center gap-3">
+
+                <i class="fa-solid fa-moon"></i>
+                Dark Mode
+
+            </button>
+<button id="rtlToggle"
+        class="mt-3 w-full
+               px-4 py-3
+               rounded-2xl
+               bg-slate-100
+               dark:bg-slate-800
+               text-slate-700
+               dark:text-white
+               flex items-center gap-3">
+
+    <i class="fa-solid fa-right-left"></i>
+    RTL Layout
+
+</button>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+     <main class="flex-1 lg:ml-72 ml-0 pt-16 lg:pt-10 p-6"> 
+<div class="w-full max-w-7xl mx-auto px-6">
+    <h1 class="text-4xl font-black text-slate-900 dark:text-white mb-6">  Clients Management</h1>
+
+        <p class=" text-slate-600 dark:text-slate-400 mb-7 ">
+            Welcome back to your Home Organizer Admin Panel.
+        </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+
+  <!-- Total Clients -->
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-5 shadow-sm">
+    <p class="text-sm text-slate-500">Total Clients</p>
+    <h2 class="text-2xl font-bold text-slate-800 dark:text-white">
+      128
+    </h2>
+  </div>
+
+  <!-- Pending -->
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-5 shadow-sm">
+    <p class="text-sm text-slate-500">Pending</p>
+    <h2 class="text-2xl font-bold text-yellow-600">
+      32
+    </h2>
+  </div>
+
+  <!-- Completed -->
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-5 shadow-sm">
+    <p class="text-sm text-slate-500">Completed</p>
+    <h2 class="text-2xl font-bold text-green-600">
+      96
+    </h2>
+  </div>
+
+</div>
+  <!-- ADD CLIENT FORM -->
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-3xl p-6 mb-8">
+
+   <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">
+  Add New Client
+</h2>
+     <div class="grid grid-cols-1 lg:grid-cols-4 gap-3 mt-8">
+
+  
+
+
+  <!-- NAME -->
+  <input id="name"
+    placeholder="Client Name"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"/>
+
+  <!-- EMAIL -->
+  <input id="email"
+    placeholder="Email"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"/>
+
+  <!-- PHONE -->
+  <input id="phone"
+    placeholder="Phone"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"/>
+
+
+  <!-- CITY -->
+  <input id="city"
+    placeholder="City"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"/>
+
+  <!-- PROJECT TYPE -->
+  <select id="projects"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10">
+
+    <option>Kitchen Organization</option>
+    <option>Closet Setup</option>
+    <option>Garage Declutter</option>
+    <option>Full Home Organizer</option>
+
+  </select>
+
+  <!-- DATE -->
+  <input id="date" type="date"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"/>
+
+  <!-- BUDGET -->
+  <input id="budget"
+    placeholder="Budget"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"/>
+
+  <!-- STATUS -->
+  <select id="status"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10">
+
+    <option>Active</option>
+    <option>Inactive</option>
+
+  </select>
+
+  <!-- PRIORITY (optional but useful) -->
+  <select id="priority"
+    class="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10">
+
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+
+  </select>
+
+</div>
+
+<!-- BUTTON -->
+<button onclick="addClient()"
+  class="mt-6 px-6 py-3 rounded-xl bg-violet-600 text-white hover:bg-violet-700">
+  + Add Client
+</button>
+    
+
+  </div>
+
+  <!-- TABLE -->
+
+ 
+  <div class="bg-white flex flex-col dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-3xl overflow-hidden">
+
+   <table class="w-full">
+
+  <thead class="bg-slate-100 dark:bg-slate-800">
+  <tr class="text-left text-sm text-slate-600 dark:text-slate-300">
+
+    <th class="px-6 py-4">Name</th>
+    <th class="px-6 py-4">Email</th>
+    <th class="px-6 py-4">Phone</th> 
+    <th class="px-6 py-4">City</th>
+    <th class="px-6 py-4">Projects</th>
+    <th class="px-6 py-4">Date</th>
+
+<th class="px-6 py-4">Budget</th>
+    <th class="px-6 py-4">Status</th>
+    <th class="px-6 py-4">Action</th>
+
+  </tr>
+</thead>
+
+  <tbody id="clientTable">
+
+   
+<tr class="border-b border-slate-200 dark:border-white/10">
+
+  <!-- Name -->
+  <td class="px-6 py-4 text-slate-900 dark:text-white">
+    Sarah Wilson
+  </td>
+
+  <!-- Email -->
+  <td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+    sarah@email.com
+  </td>
+
+  <!-- Phone -->
+  <td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+    9876543210
+  </td>
+
+
+  <!-- City -->
+  <td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+    Chennai
+  </td>
+
+  <!-- Projects -->
+  <td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+    Kitchen Setup
+  </td>
+
+  <!-- Date -->
+  <td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+    23-06-2026
+  </td>
+
+  <!-- Budget -->
+  <td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+    ₹25,000
+  </td>
+
+  <!-- Status -->
+  <td class="px-6 py-4">
+    <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+      Active
+    </span>
+  </td>
+
+  <!-- Action -->
+  <td class="px-6 py-4">
+    <button onclick="this.closest('tr').remove()"
+      class="text-red-500 hover:text-red-400">
+      Delete
+    </button>
+  </td>
+
+</tr>
+  </tbody>
+
+</table>
+
+  </div>
+    
+
+
+
+    </main>
+
+</div>
+
+<script>
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("sidebarOverlay");
+const menuBtn = document.getElementById("mobileMenuBtn");
+const closeBtn = document.getElementById("closeSidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+});
+
+overlay.addEventListener("click", () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+});
+
+document.getElementById("themeToggle").addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+});
+
+const rtlBtn = document.getElementById("rtlToggle");
+
+rtlBtn.addEventListener("click", () => {
+
+    const html = document.documentElement;
+
+    if (html.getAttribute("dir") === "rtl") {
+        html.setAttribute("dir", "ltr");
+    } else {
+        html.setAttribute("dir", "rtl");
+    }
+
+});
+
+</script>
+<script src="assets/js/main.js"></script>
+
+<script>
+/* =========================
+   GET + SAVE HELPERS
+========================= */
+
+function getClients() {
+  return JSON.parse(localStorage.getItem("clients")) || [];
+}
+
+function saveClients(clients) {
+  localStorage.setItem("clients", JSON.stringify(clients));
+}
+
+/* =========================
+   ADD CLIENT
+========================= */
+
+function addClient() {
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+
+
+  const city = document.getElementById("city").value.trim();
+  const projects = document.getElementById("projects").value;
+  const date = document.getElementById("date").value;
+  const budget = document.getElementById("budget").value.trim();
+  const status = document.getElementById("status").value;
+
+  if (!name || !email || !phone) {
+    alert("Please fill Name, Email, Phone");
+    return;
+  }
+
+  const clients = getClients();
+
+  clients.push({
+    id: Date.now(),
+    name,
+    email,
+    phone,
+    
+    city,
+    projects,
+    date,
+    budget,
+    status
+  });
+
+  saveClients(clients);
+  renderClients();
+
+  clearForm();
+}
+
+/* =========================
+   RENDER CLIENTS TABLE
+========================= */
+
+function renderClients() {
+
+  const clients = getClients();
+  const table = document.getElementById("clientTable");
+
+  table.innerHTML = "";
+
+  clients.forEach(client => {
+
+    const row = document.createElement("tr");
+    row.className = "border-b border-slate-200 dark:border-white/10";
+
+    row.innerHTML = `
+      <td class="px-6 py-4 text-slate-900 dark:text-white">${client.name}</td>
+      <td class="px-6 py-4 text-slate-500 dark:text-slate-400">${client.email}</td>
+      <td class="px-6 py-4 text-slate-500 dark:text-slate-400">${client.phone}</td>
+     
+      <td class="px-6 py-4 text-slate-500 dark:text-slate-400">${client.city || '-'}</td>
+      <td class="px-6 py-4 text-slate-500 dark:text-slate-400">${client.projects}</td>
+      <td class="px-6 py-4 text-slate-500 dark:text-slate-400">${client.date || '-'}</td>
+      <td class="px-6 py-4 text-slate-500 dark:text-slate-400">${client.budget || '-'}</td>
+
+      <td class="px-6 py-4">
+        <span class="px-3 py-1 text-xs rounded-full
+          ${client.status === 'Active'
+            ? 'bg-green-100 text-green-600'
+            : 'bg-slate-200 text-slate-600'}">
+          ${client.status}
+        </span>
+      </td>
+
+      <td class="px-6 py-4">
+        <button onclick="deleteClient(${client.id})"
+          class="text-red-500 hover:text-red-400">
+          Delete
+        </button>
+      </td>
+    `;
+
+    table.appendChild(row);
+  });
+}
+
+/* =========================
+   DELETE CLIENT
+========================= */
+
+function deleteClient(id) {
+
+  let clients = getClients();
+
+  clients = clients.filter(c => c.id !== id);
+
+  saveClients(clients);
+
+  renderClients();
+}
+
+/* =========================
+   CLEAR FORM
+========================= */
+
+function clearForm() {
+  document.querySelectorAll("input").forEach(i => i.value = "");
+}
+
+/* =========================
+   INIT ON PAGE LOAD
+========================= */
+
+window.onload = function () {
+  renderClients();
+};
+</script>
+<script>
+
+let selectedClient = null;
+
+// Select client
+function selectClient(name) {
+  selectedClient = name;
+
+  document.getElementById("clientInfo").innerHTML = `
+    <div class="p-3 rounded-xl bg-slate-200 dark:bg-slate-700">
+      <p class="font-bold text-slate-900 dark:text-white">${name}</p>
+    </div>
+  `;
+
+  document.getElementById("projectList").innerHTML = "";
+}
+
+// Assign project
+function assignProject() {
+
+  if (!selectedClient) {
+    alert("Please select a client first");
+    return;
+  }
+
+  const projectName = document.getElementById("projectName").value.trim();
+  const status = document.getElementById("projectStatus").value;
+
+  if (!projectName) {
+    alert("Enter project name");
+    return;
+  }
+
+  const box = document.createElement("div");
+  box.className = "p-3 rounded-xl bg-slate-100 dark:bg-slate-800";
+
+  box.innerHTML = `
+    <p class="font-semibold text-slate-900 dark:text-white">
+      ${projectName}
+    </p>
+    <p class="text-sm text-slate-500 dark:text-slate-400">
+      ${status}
+    </p>
+  `;
+
+  document.getElementById("projectList").appendChild(box);
+
+  document.getElementById("projectName").value = "";
+}
+
+</script>
+</body>
+</html>
+
+

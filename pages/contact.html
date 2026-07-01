@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/cleaning.png">
+
+<!-- Animation keyframes -->
+<style>
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+<title>Home Organizer & Decluttering Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>body { font-family: 'Outfit', sans-serif; }</style>
+</head>
+
+<body>
+<nav class="fixed top-0 z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 w-full">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <a href="/" class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-violet-600 text-white flex items-center justify-center font-bold">
+          <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+        </div>
+        <span class="font-bold text-violet-700 dark:text-white">Home Organizer</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="/" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Home</a>
+        <a href="about.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">About</a>
+        <a href="service.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Services</a>
+        <a href="gallery.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Gallery</a>
+        
+        <a href="contact.html" class="px-4 py-2 rounded-full bg-violet-500 text-white font-medium">Contact</a>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <button id="themeToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-180 transition">🌙</button>
+        <button id="rtlToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-[360deg] transition">⇄</button>
+        <a href="#" class="px-5 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold shadow-lg hover:scale-105 shadow-violet-500/30 transition">Login</a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">
+        ☰
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden absolute top-16 left-0 w-full z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 px-6 py-6 flex flex-col gap-4 shadow-xl">
+  
+  <a href="/" class="block py-2 text-slate-700 dark:text-violet-200">Home</a>
+  <a href="about.html" class="block  py-2 text-slate-700    dark:text-violet-200">About</a>
+  <a href="service.html" class="block py-2 text-slate-700 dark:text-violet-200">Services</a>
+  <a href="gallery.html" class="block py-2 text-slate-700 dark:text-violet-200">Gallery</a>
+  
+  <a href="contact.html" class="block px-4 py-2 text-slate-700 rounded-full  bg-violet-500  dark:text-violet-200">Contact</a>
+  
+  <div class="flex items-center gap-4 pt-4 border-t border-violet-500/10">
+    <button id="themeTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">Theme</button>
+    <button id="rtlTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">RTL</button>
+  </div>
+  
+  <a href="#" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold">Login</a>
+</div>
+  </div>
+</nav>
+<main>
+    <section class="relative overflow-hidden py-24">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50
+                via-white
+                to-slate-50
+                dark:from-slate-950
+                dark:via-slate-900
+                dark:to-slate-950">
+    </div>
+
+    <!-- Glow Effects -->
+    <div class="absolute top-20 left-20
+                w-72 h-72
+                bg-violet-500/10
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="absolute bottom-10 right-10
+                w-72 h-72
+                bg-fuchsia-500/10
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Content -->
+            <div>
+
+                <span class="inline-flex items-center
+                             px-4 py-2 rounded-full
+                             bg-violet-100
+                             dark:bg-violet-500/10
+                             text-violet-700
+                             dark:text-violet-300
+                             text-sm font-semibold">
+
+                    📞 Contact Our Team
+
+                </span>
+
+                <h1 class="mt-8 text-5xl md:text-6xl
+                           font-black leading-tight
+                           text-slate-900
+                           dark:text-white">
+
+                    Let's Create An
+
+                    <span class="bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent">
+
+                        Organized Home
+
+                    </span>
+
+                    Together
+
+                </h1>
+
+                <p class="mt-6 text-lg
+                          text-slate-600
+                          dark:text-slate-300
+                          max-w-xl">
+
+                    Whether you need closet organization,
+                    kitchen decluttering, or a complete
+                    home transformation, our experts are
+                    ready to help.
+
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4 mt-10">
+
+                    <a href="#contact-form"
+                       class="px-8 py-4 rounded-xl
+                              bg-gradient-to-r
+                              from-violet-600
+                              to-purple-600
+                              text-white font-bold
+                              shadow-xl shadow-violet-500/30
+                              hover:scale-105
+                              transition">
+
+                        Book Free Consultation
+
+                    </a>
+
+                    <a href="tel:+123456789"
+                       class="px-4 py-4 rounded-xl
+                               border border-violet-400
+                          text-violet-700 dark:text-violet-200 font-semibold
+                          hover:bg-violet-100 dark:hover:bg-violet-900
+                          transition">
+
+                        Call Now
+
+                    </a>
+
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6 mt-12">
+
+                    <div>
+                        <h3 class="text-3xl font-black text-violet-600">
+                            5K+
+                        </h3>
+                        <p class="text-slate-500 text-sm">
+                            Happy Clients
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-3xl font-black text-purple-600">
+                            12K+
+                        </h3>
+                        <p class="text-slate-500 text-sm">
+                            Spaces Organized
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-3xl font-black text-purple-600">
+                            98%
+                        </h3>
+                        <p class="text-slate-500 text-sm">
+                            Satisfaction
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Image -->
+            <div class="relative">
+
+                <img
+                    src="/assets/images/9.jpg"
+                    alt="Contact Home Organizer"
+                    class="rounded-[2rem]
+                           h-[600px]
+                           w-full
+                           object-cover
+                           shadow-2xl">
+
+                <!-- Floating Card -->
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            right-6
+                            bg-white/90
+                            dark:bg-slate-900/90
+                            backdrop-blur-xl
+                            rounded-3xl
+                            p-6
+                            shadow-xl">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-14 h-14
+                                    rounded-2xl
+                                    bg-violet-100
+                                    dark:bg-violet-500/10
+                                    flex items-center justify-center">
+
+                            📅
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-bold
+                                       text-slate-900
+                                       dark:text-white">
+
+                                Free Consultation
+
+                            </h4>
+
+                            <p class="text-sm text-slate-500">
+
+                                30-minute personalized assessment
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="relative py-24">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-white
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center
+                         px-4 py-2 rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                📍 Get In Touch
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                Multiple Ways To
+                Reach Our Team
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Whether you prefer calling, emailing,
+                or scheduling a consultation, we're
+                here to help.
+
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+
+            <!-- Phone -->
+            <div class="rounded-3xl
+                        p-8
+                        bg-white
+                        dark:bg-white/5
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+                <div class="overflow-hidden rounded-2xl">
+                    <img
+                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                        class="h-40 w-full object-cover">
+                </div>
+
+                <h3 class="mt-6 text-xl font-black
+                           text-slate-900 dark:text-white">
+
+                    Call Us
+
+                </h3>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-300">
+
+                    Speak directly with our team.
+
+                </p>
+
+                <a href="tel:+123456789"
+                   class="inline-block mt-5
+                          text-violet-600
+                          font-bold">
+
+                    +1 (234) 567-890
+
+                </a>
+
+            </div>
+
+            <!-- Email -->
+            <div class="rounded-3xl
+                        p-8
+                        bg-white
+                        dark:bg-white/5
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+                <div class="overflow-hidden rounded-2xl">
+                    <img
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                        class="h-40 w-full object-cover">
+                </div>
+
+                <h3 class="mt-6 text-xl font-black
+                           text-slate-900 dark:text-white">
+
+                    Email Us
+
+                </h3>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-300">
+
+                    Send your project details anytime.
+
+                </p>
+
+                <a href="mailto:info@example.com"
+                   class="inline-block mt-5
+                          text-violet-600
+                          font-bold">
+
+                    info@example.com
+
+                </a>
+
+            </div>
+
+            <!-- Location -->
+            <div class="rounded-3xl
+                        p-8
+                        bg-white
+                        dark:bg-white/5
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+                <div class="overflow-hidden rounded-2xl">
+                    <img
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+                        class="h-40 w-full object-cover">
+                </div>
+
+                <h3 class="mt-6 text-xl font-black
+                           text-slate-900 dark:text-white">
+
+                    Visit Us
+
+                </h3>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-300">
+
+                    Meet us at our office location.
+
+                </p>
+
+                <p class="mt-5 text-violet-600 font-bold">
+
+                    New York, USA
+
+                </p>
+
+            </div>
+
+            <!-- Hours -->
+            <div class="rounded-3xl
+                        p-8
+                        bg-white
+                        dark:bg-white/5
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+                <div class="overflow-hidden rounded-2xl">
+                    <img
+                        src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+                        class="h-40 w-full object-cover">
+                </div>
+
+                <h3 class="mt-6 text-xl font-black
+                           text-slate-900 dark:text-white">
+
+                    Working Hours
+
+                </h3>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-300">
+
+                    Available throughout the week.
+
+                </p>
+
+                <p class="mt-5 text-violet-600 font-bold">
+
+                    Mon - Sat
+                    <br>
+                    9:00 AM - 6:00 PM
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50
+                via-white
+                to-slate-50
+                dark:from-slate-900
+                dark:via-slate-950
+                dark:to-slate-900">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left Form -->
+            <div>
+
+                <span class="inline-flex px-4 py-2
+                             rounded-full
+                             bg-violet-100
+                             dark:bg-violet-500/10
+                             text-violet-700
+                             dark:text-violet-300
+                             text-sm font-semibold">
+
+                    📝 Request Consultation
+
+                </span>
+
+                <h2 class="mt-6 text-4xl font-black
+                           text-slate-900
+                           dark:text-white">
+
+                    Tell Us About
+                    Your Project
+
+                </h2>
+
+                <p class="mt-4 text-lg
+                          text-slate-600
+                          dark:text-slate-300">
+
+                    Fill out the form and our team
+                    will contact you within 24 hours.
+
+                </p>
+
+               <form class="mt-10 space-y-5">
+
+    <!-- Name -->
+    <input
+        type="text"
+        placeholder="Full Name"
+        class="w-full px-5 py-4 rounded-2xl
+               bg-white
+               dark:bg-slate-800
+               text-slate-900
+               dark:text-white
+               placeholder:text-slate-400
+               dark:placeholder:text-slate-500
+               border border-slate-200
+               dark:border-slate-700
+               focus:outline-none
+               focus:ring-2
+               focus:ring-violet-500/50
+               transition-all">
+
+    <!-- Email -->
+    <input
+        type="email"
+        placeholder="Email Address"
+        class="w-full px-5 py-4 rounded-2xl
+               bg-white
+               dark:bg-slate-800
+               text-slate-900
+               dark:text-white
+               placeholder:text-slate-400
+               dark:placeholder:text-slate-500
+               border border-slate-200
+               dark:border-slate-700
+               focus:outline-none
+               focus:ring-2
+               focus:ring-violet-500/50
+               transition-all">
+
+    <!-- Phone -->
+    <input
+        type="tel"
+        placeholder="Phone Number"
+        class="w-full px-5 py-4 rounded-2xl
+               bg-white
+               dark:bg-slate-800
+               text-slate-900
+               dark:text-white
+               placeholder:text-slate-400
+               dark:placeholder:text-slate-500
+               border border-slate-200
+               dark:border-slate-700
+               focus:outline-none
+               focus:ring-2
+               focus:ring-violet-500/50
+               transition-all">
+
+    <!-- Service -->
+    <select
+        class="w-full px-5 py-4 rounded-2xl
+               bg-white
+               dark:bg-slate-800
+               text-slate-900
+               dark:text-white
+               border border-slate-200
+               dark:border-slate-700
+               focus:outline-none
+               focus:ring-2
+               focus:ring-violet-500/50
+               transition-all">
+
+        <option value="">Select Service</option>
+        <option>Kitchen Organization</option>
+        <option>Closet Organization</option>
+        <option>Home Office Setup</option>
+        <option>Whole Home Organization</option>
+
+    </select>
+
+    <!-- Message -->
+    <textarea
+        rows="5"
+        placeholder="Tell us about your project..."
+        class="w-full px-5 py-4 rounded-2xl
+               bg-white
+               dark:bg-slate-800
+               text-slate-900
+               dark:text-white
+               placeholder:text-slate-400
+               dark:placeholder:text-slate-500
+               border border-slate-200
+               dark:border-slate-700
+               focus:outline-none
+               focus:ring-2
+               focus:ring-violet-500/50
+               transition-all resize-none"></textarea>
+
+    <!-- Button -->
+    <button
+        class="w-full py-4 rounded-2xl
+               bg-gradient-to-r
+               from-violet-600
+               to-purple-600
+               
+               text-white
+               font-bold
+               shadow-lg
+               shadow-violet-500/30
+               hover:scale-[1.02]
+               transition-all">
+
+        Book Free Consultation
+
+    </button>
+ 
+</form>
+
+            </div>
+
+            <!-- Right Content -->
+            <div class="relative">
+
+                <img
+                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
+                    class="rounded-[2rem]
+                           h-[650px]
+                           w-full
+                           object-cover
+                           shadow-2xl">
+
+                <!-- Floating Card -->
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            right-6
+                            bg-white/95
+                            dark:bg-slate-900/95
+                            backdrop-blur-xl
+                            rounded-3xl
+                            p-6
+                            shadow-xl">
+
+                    <span class="text-sm
+                                 font-bold
+                                 text-violet-600">
+
+                        WHAT HAPPENS NEXT?
+
+                    </span>
+
+                    <div class="mt-4 space-y-4">
+
+                        <div class="flex gap-4">
+
+                            <div class="w-10 h-10 rounded-xl
+                                        bg-violet-100
+                                        dark:bg-violet-500/10
+                                        flex items-center justify-center
+                                        font-bold text-violet-600">
+
+                                1
+
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold
+                                           text-slate-900
+                                           dark:text-white">
+                                    Consultation Call
+                                </h4>
+                                <p class="text-sm text-slate-500">
+                                    Discuss your goals and spaces.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="flex gap-4">
+
+                            <div class="w-10 h-10 rounded-xl
+                                        bg-violet-100
+                                        dark:bg-violet-500/10
+                                        flex items-center justify-center
+                                        font-bold text-violet-600">
+
+                                2
+
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold
+                                           text-slate-900
+                                           dark:text-white">
+                                    Custom Plan
+                                </h4>
+                                <p class="text-sm text-slate-500">
+                                    Personalized organization strategy.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="flex gap-4">
+
+                            <div class="w-10 h-10 rounded-xl
+                                        bg-violet-100
+                                        dark:bg-violet-500/10
+                                        flex items-center justify-center
+                                        font-bold text-violet-600">
+
+                                3
+
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold
+                                           text-slate-900
+                                           dark:text-white">
+                                    Transformation
+                                </h4>
+                                <p class="text-sm text-slate-500">
+                                    Start organizing and enjoy results.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="py-24 relative overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-slate-50
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Office Image -->
+            <div class="relative">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+                    alt="Office"
+                    class="rounded-[2rem]
+                           h-[550px]
+                           w-full
+                           object-cover
+                           shadow-2xl">
+
+                <!-- Floating Card -->
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            right-6
+                            bg-white/95
+                            dark:bg-slate-900/95
+                            backdrop-blur-xl
+                            rounded-3xl
+                            p-6
+                            shadow-xl">
+
+                    <span class="text-sm
+                                 font-bold
+                                 text-violet-600">
+
+                        VISIT OUR OFFICE
+
+                    </span>
+
+                    <h4 class="mt-2 text-xl font-black
+                               text-slate-900
+                               dark:text-white">
+
+                        Meet Our Organizing Experts
+
+                    </h4>
+
+                    <p class="mt-2
+                              text-slate-600
+                              dark:text-slate-400">
+
+                        Schedule an in-person consultation
+                        and discuss your project directly.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div>
+
+                <span class="inline-flex px-4 py-2
+                             rounded-full
+                             bg-violet-100
+                             dark:bg-violet-500/10
+                             text-violet-700
+                             dark:text-violet-300
+                             text-sm font-semibold">
+
+                    📍 Our Location
+
+                </span>
+
+                <h2 class="mt-6 text-4xl md:text-5xl
+                           font-black
+                           text-slate-900
+                           dark:text-white">
+
+                    Visit Our Office
+                    And Explore Solutions
+
+                </h2>
+
+                <p class="mt-6 text-lg
+                          text-slate-600
+                          dark:text-slate-300">
+
+                    Whether you're planning a single-room
+                    makeover or a complete home organization,
+                    our team is ready to help.
+
+                </p>
+
+                <!-- Details -->
+                <div class="mt-10 space-y-6">
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 rounded-2xl
+                                    bg-violet-100
+                                    dark:bg-violet-500/10
+                                    flex items-center justify-center">
+
+                            📍
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-bold
+                                       text-slate-900
+                                       dark:text-white">
+
+                                Address
+
+                            </h4>
+
+                            <p class="text-slate-600
+                                      dark:text-slate-400">
+
+                                123 Business Avenue,
+                                Downtown City
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 rounded-2xl
+                                    bg-purple-100
+                                    dark:bg-purple-500/10
+                                    flex items-center justify-center">
+
+                            📞
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-bold
+                                       text-slate-900
+                                       dark:text-white">
+
+                                Phone
+
+                            </h4>
+
+                            <p class="text-slate-600
+                                      dark:text-slate-400">
+
+                                +91 98765 43210
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 rounded-2xl
+                                    bg-fuchsia-100
+                                    dark:bg-fuchsia-500/10
+                                    flex items-center justify-center">
+
+                            ⏰
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-bold
+                                       text-slate-900
+                                       dark:text-white">
+
+                                Business Hours
+
+                            </h4>
+
+                            <p class="text-slate-600
+                                      dark:text-slate-400">
+
+                                Monday - Saturday
+                                • 9:00 AM - 6:00 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-10 flex flex-wrap gap-4">
+
+                    <a href="#"
+                       class="px-7 py-4
+                              rounded-2xl
+                              bg-gradient-to-r
+                              from-violet-600
+                              to-purple-600
+                              text-white
+                              font-bold">
+
+                        Get Directions
+
+                    </a>
+
+                    <a href="#"
+                       class="px-7 py-4
+                              rounded-2xl
+                              border
+                              border-slate-300
+                              dark:border-slate-700
+                              text-slate-900
+                              dark:text-white
+                              font-semibold">
+
+                        Schedule Visit
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="py-24 relative overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-white
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-5xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center">
+
+            <span class="inline-flex px-4 py-2
+                         rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                ❓ Frequently Asked Questions
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                Everything You Need
+                To Know
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Answers to common questions about
+                our home organization services.
+
+            </p>
+
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="mt-16 space-y-5">
+
+            <!-- FAQ 1 -->
+            <details class="group
+                             rounded-3xl
+                             bg-white
+                             dark:bg-slate-900
+                             border border-slate-200
+                             dark:border-slate-800
+                             p-6">
+
+                <summary class="flex justify-between items-center
+                                cursor-pointer
+                                font-bold
+                                text-slate-900
+                                dark:text-white">
+
+                    How long does a home organization project take?
+
+                    <span class="group-open:rotate-45 transition">
+                        +
+                    </span>
+
+                </summary>
+
+                <p class="mt-4
+                          text-slate-600
+                          dark:text-slate-400">
+
+                    Most projects take between one day
+                    and one week depending on the size
+                    of the space and requirements.
+
+                </p>
+
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group
+                             rounded-3xl
+                             bg-white
+                             dark:bg-slate-900
+                             border border-slate-200
+                             dark:border-slate-800
+                             p-6">
+
+                <summary class="flex justify-between items-center
+                                cursor-pointer
+                                font-bold
+                                text-slate-900
+                                dark:text-white">
+
+                    Do you provide virtual consultations?
+
+                    <span class="group-open:rotate-45 transition">
+                        +
+                    </span>
+
+                </summary>
+
+                <p class="mt-4
+                          text-slate-600
+                          dark:text-slate-400">
+
+                    Yes. We offer online consultations,
+                    planning sessions, and project reviews
+                    from anywhere.
+
+                </p>
+
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group
+                             rounded-3xl
+                             bg-white
+                             dark:bg-slate-900
+                             border border-slate-200
+                             dark:border-slate-800
+                             p-6">
+
+                <summary class="flex justify-between items-center
+                                cursor-pointer
+                                font-bold
+                                text-slate-900
+                                dark:text-white">
+
+                    Do I need to purchase storage products?
+
+                    <span class="group-open:rotate-45 transition">
+                        +
+                    </span>
+
+                </summary>
+
+                <p class="mt-4
+                          text-slate-600
+                          dark:text-slate-400">
+
+                    Not always. We first maximize your
+                    existing storage before recommending
+                    additional products if needed.
+
+                </p>
+
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group
+                             rounded-3xl
+                             bg-white
+                             dark:bg-slate-900
+                             border border-slate-200
+                             dark:border-slate-800
+                             p-6">
+
+                <summary class="flex justify-between items-center
+                                cursor-pointer
+                                font-bold
+                                text-slate-900
+                                dark:text-white">
+
+                    How quickly can I get started?
+
+                    <span class="group-open:rotate-45 transition">
+                        +
+                    </span>
+
+                </summary>
+
+                <p class="mt-4
+                          text-slate-600
+                          dark:text-slate-400">
+
+                    Most consultations are scheduled
+                    within 24–48 hours after inquiry.
+
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="relative overflow-hidden
+                    rounded-[40px]
+                    lg:rounded-[56px]">
+
+            <!-- Background -->
+            <div class="absolute inset-0">
+
+                <!-- Light Mode -->
+                <div class="absolute inset-0
+                            bg-gradient-to-br
+                            from-violet-50
+                            via-white
+                            to-purple-50
+                            dark:hidden">
+                </div>
+
+                <!-- Dark Mode -->
+                <div class="hidden dark:block
+                            absolute inset-0
+                            bg-gradient-to-r
+                            from-slate-950
+                            via-violet-950
+                            to-purple-950">
+                </div>
+
+            </div>
+
+            <!-- Glow Effects -->
+            <div class="absolute -top-24 -right-24
+                        w-96 h-96
+                        rounded-full
+                        bg-violet-500/20
+                        blur-3xl">
+            </div>
+
+            <div class="absolute -bottom-24 -left-24
+                        w-96 h-96
+                        rounded-full
+                        bg-fuchsia-500/20
+                        blur-3xl">
+            </div>
+
+            <!-- Content -->
+            <div class="relative
+                        py-20 lg:py-28
+                        px-8 lg:px-20
+                        text-center">
+
+                <!-- Badge -->
+                <span class="inline-flex
+                             px-5 py-2.5
+                             rounded-full
+                             bg-white/80
+                             dark:bg-white/10
+                             backdrop-blur-xl
+                             border border-violet-200
+                             dark:border-white/10
+                             text-violet-700
+                             dark:text-violet-300
+                             text-sm font-semibold">
+
+                    ✨ READY TO TRANSFORM YOUR HOME?
+
+                </span>
+
+                <!-- Heading -->
+                <h2 class="mt-8
+                           text-4xl md:text-6xl
+                           font-black
+                           leading-tight
+                           text-slate-900
+                           dark:text-white">
+
+                    Create A Home That
+                    Feels Calm, Organized
+                    & Beautiful
+
+                </h2>
+
+                <!-- Description -->
+                <p class="mt-6
+                          max-w-3xl mx-auto
+                          text-lg
+                          text-slate-600
+                          dark:text-slate-300">
+
+                    Work with professional organizers
+                    and enjoy a clutter-free lifestyle
+                    designed around your daily routine.
+
+                </p>
+
+                <!-- Buttons -->
+                <div class="mt-10
+                            flex flex-wrap
+                            justify-center
+                            gap-4">
+
+                    <a href="#contact"
+                       class="px-8 py-4
+                              rounded-2xl
+                              bg-gradient-to-r
+                              from-violet-600
+                              to-purple-600
+                              text-white
+                              font-bold
+                              shadow-xl
+                              shadow-violet-500/30
+                              hover:scale-105
+                              transition-all">
+
+                        Book Free Consultation
+
+                    </a>
+
+                    <a href="#services"
+                       class="px-8 py-4
+                              rounded-2xl
+                              bg-white
+                              dark:bg-white/10
+                              backdrop-blur-xl
+                              border border-violet-200
+                              dark:border-white/10
+                              text-slate-900
+                              dark:text-white
+                              font-semibold
+                              hover:bg-violet-50
+                              dark:hover:bg-white/20
+                              transition-all">
+
+                        Explore Services
+
+                    </a>
+
+                </div>
+
+                <!-- Stats -->
+                <div class="mt-16
+                            grid sm:grid-cols-3
+                            gap-6
+                            max-w-5xl
+                            mx-auto">
+
+                    <!-- Stat 1 -->
+                    <div class="rounded-3xl
+                                bg-white/80
+                                dark:bg-white/5
+                                backdrop-blur-xl
+                                border border-violet-100
+                                dark:border-white/10
+                                p-6">
+
+                        <h3 class="text-4xl
+                                   font-black
+                                   text-violet-600">
+
+                            5K+
+
+                        </h3>
+
+                        <p class="mt-2
+                                  text-slate-600
+                                  dark:text-slate-400">
+
+                            Happy Clients
+
+                        </p>
+
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="rounded-3xl
+                                bg-white/80
+                                dark:bg-white/5
+                                backdrop-blur-xl
+                                border border-violet-100
+                                dark:border-white/10
+                                p-6">
+
+                        <h3 class="text-4xl
+                                   font-black
+                                   text-purple-600">
+
+                            98%
+
+                        </h3>
+
+                        <p class="mt-2
+                                  text-slate-600
+                                  dark:text-slate-400">
+
+                            Satisfaction Rate
+
+                        </p>
+
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="rounded-3xl
+                                bg-white/80
+                                dark:bg-white/5
+                                backdrop-blur-xl
+                                border border-violet-100
+                                dark:border-white/10
+                                p-6">
+
+                        <h3 class="text-4xl
+                                   font-black
+                                   text-fuchsia-600">
+
+                            24h
+
+                        </h3>
+
+                        <p class="mt-2
+                                  text-slate-600
+                                  dark:text-slate-400">
+
+                            Response Time
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+    <footer class="relative overflow-hidden bg-white
+dark:bg-slate-950">
+
+    
+
+    <!-- Glow Effects -->
+    <div class="absolute top-0 left-0 w-80 h-80
+                bg-violet-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80
+                bg-purple-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Top Footer -->
+        <div class="grid lg:grid-cols-4 gap-12 py-20">
+
+            <!-- Brand -->
+            <div>
+
+                <div class="flex items-center gap-3">
+
+                    <div class="w-12 h-12 rounded-2xl
+                                bg-gradient-to-br
+                                from-violet-500
+                                to-purple-600
+                                flex items-center justify-center
+                                text-white text-xl">
+
+                    <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+
+                    </div>
+
+                    <h3 class="text-xl font-black  text-violet-700 dark:text-white">
+                        Home Organizer
+                    </h3>
+
+                </div>
+
+                <p class="mt-6 text-slate-900 dark:text-white leading-relaxed">
+
+                    Professional home organization and
+                    decluttering solutions that transform
+                    everyday spaces into peaceful,
+                    functional environments.
+
+                </p>
+
+                <!-- Social -->
+             <div class="flex gap-4 mt-8">
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+   
+
+</div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h4 class="text-lg font-bold text-violet-700 dark:text-white">
+                    Quick Links
+                </h4>
+
+                <ul class="mt-6 space-y-4 ">
+
+                    <li >
+                        <a href="#"
+                           class= "text-slate-900 dark:text-white  hover:text-violet-400  transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white  hover:text-violet-400 transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="  text-slate-900 dark:text-white  hover:text-violet-400 transition">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div>
+
+                <h4 class="text-lg font-bold text-violet-700 dark:text-white">
+                    Services
+                </h4>
+
+                <ul class="mt-6 space-y-4">
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Kitchen Organization
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Closet Makeovers
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Home Office Setup
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Garage Organization
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Full Home Decluttering
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+
+                <h4 class="text-lg font-bold  text-violet-700 dark:text-white"">
+                    Stay Updated
+                </h4>
+
+                <p class="mt-6  text-slate-900 dark:text-white">
+
+                    Get organizing tips, storage ideas,
+                    and exclusive offers delivered
+                    directly to your inbox.
+
+                </p>
+
+                <form class="mt-6 ">
+
+                    <input
+                        type="email"
+                        placeholder="Your Email Address"
+                        class="w-full px-5 py-4 rounded-2xl
+                               bg-white/10
+                               border border-white/10
+                               text-white
+                               placeholder-slate-600
+                               focus:outline-none
+                               focus:border-violet-500">
+
+                    <button
+                        class="w-full mt-4 py-4 rounded-2xl
+                               bg-gradient-to-r
+                               from-violet-600
+                               to-purple-600
+                               text-white
+                               font-semibold">
+
+                        Subscribe Now
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-white/10
+                    py-8">
+
+            <div class="flex flex-col md:flex-row
+                        items-center justify-between
+                        gap-4">
+
+                <p class=" text-slate-900 dark:text-white text-center md:text-left">
+
+                    © 2026 Home Organizer. All rights reserved.
+
+                </p>
+
+                <div class="flex gap-6">
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Terms of Service
+                    </a>
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Cookies
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+    <script src="/assets/js/main.js"></script>
+    </body>
+    </html>

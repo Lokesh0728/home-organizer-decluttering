@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/output.css">
+
+
+<title>Home Organizer & Decluttering Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>body { font-family: 'Outfit', sans-serif; }</style>
+</head>
+
+<body>
+<nav class="fixed top-0 z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 w-full">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+       <a href="/" class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-violet-600 text-white flex items-center justify-center font-bold">
+          <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+        </div>
+        <span class="font-bold text-violet-700 dark:text-white">Home Organizer</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="/" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Home</a>
+        <a href="about.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">About</a>
+        <a href="service.html" class="px-4 py-2 rounded-full bg-violet-500 text-white font-medium">Services</a>
+        <a href="gallery.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Gallery</a>
+        
+        <a href="contact.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Contact</a>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <button id="themeToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-180 transition">🌙</button>
+        <button id="rtlToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-[360deg] transition">⇄</button>
+        <a href="login.html" class="px-5 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold shadow-lg hover:scale-105 shadow-violet-500/30 transition">Login</a>
+      </div>
+ 
+      <button id="menuBtn" class="lg:hidden h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">
+        ☰
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden absolute top-16 left-0 w-full z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 px-6 py-6 flex flex-col gap-4 shadow-xl">
+  
+  <a href="/" class="block py-2 text-slate-700 dark:text-violet-200">Home</a>
+    <a href="about.html" class="block py-2 text-slate-700 dark:text-violet-200">About</a>
+  <a href="service.html" class="block px-4 py-2 rounded-full bg-violet-500 text-white font-medium">Services</a>
+  <a href="gallery.html" class="block py-2 text-slate-700 dark:text-violet-200">Gallery</a>
+  
+  <a href="contact.html" class="block py-2 text-slate-700 dark:text-violet-200">Contact</a>
+  
+  <div class="flex items-center gap-4 pt-4 border-t border-violet-500/10">
+    <button id="themeTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">Theme</button>
+    <button id="rtlTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">RTL</button>
+  </div>
+  
+  <a href="login.html" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold">Login</a>
+</div>
+  </div>
+</nav>
+<main>
+   <section class="relative overflow-hidden py-20 lg:py-32">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-br
+                from-slate-50
+                via-white
+                to-violet-50
+                dark:from-slate-950
+                dark:via-slate-900
+                dark:to-violet-950">
+    </div>
+
+    <!-- Glow -->
+    <div class="absolute top-20 left-0 w-96 h-96
+                bg-violet-500/10
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Content -->
+            <div>
+
+                <!-- Badge -->
+                <span class="inline-flex items-center gap-2
+                             px-4 py-2 rounded-full
+                             bg-violet-100
+                             dark:bg-violet-500/10
+                             text-violet-700
+                             dark:text-violet-300
+                             text-sm font-semibold">
+
+                    ✨ Professional Organization Services
+
+                </span>
+
+                <!-- Heading -->
+                <h1 class="mt-8 text-5xl md:text-6xl
+                           font-black leading-tight
+                           text-slate-900
+                           dark:text-white">
+
+                    Transform Every Room Into
+
+                    <span class="
+                                 bg-gradient-to-r
+                                 from-violet-600
+                                 via-purple-600
+                                 to-fuchsia-600
+                                 bg-clip-text
+                                 text-transparent">
+
+                        An Organized Space
+
+                    </span>
+
+                </h1>
+
+                <!-- Description -->
+                <p class="mt-6 text-lg md:text-xl
+                          text-slate-600
+                          dark:text-slate-300
+                          leading-relaxed">
+
+                    From kitchens and closets to entire homes,
+                    our expert organizers create customized
+                    systems that simplify daily living and
+                    eliminate clutter for good.
+
+                </p>
+
+                <!-- Buttons -->
+                <div class="mt-10 flex flex-wrap gap-4">
+
+                    <a href="#services"
+                       class="px-8 py-4 rounded-xl
+                              bg-gradient-to-r
+                              from-violet-600
+                              to-purple-600
+                              text-white font-semibold
+                              shadow-xl shadow-violet-500/30
+                              hover:scale-105
+                              transition-all">
+
+                        Explore Services
+
+                    </a>
+
+                    <a href="#booking"
+                       class="px-8 py-4 rounded-xl
+                          border border-violet-400
+                          text-violet-700 dark:text-violet-200
+                          hover:bg-violet-100 dark:hover:bg-violet-900
+                          transition">
+
+                        Book Consultation
+
+                    </a>
+
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-4 mt-12">
+
+                    <div>
+                        <h3 class="text-3xl font-black text-violet-600">
+                            5K+
+                        </h3>
+                        <p class="text-slate-500 dark:text-slate-400">
+                            Clients
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-3xl font-black text-purple-600">
+                            12K+
+                        </h3>
+                        <p class="text-slate-500 dark:text-slate-400">
+                            Rooms Organized
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-3xl font-black text-purple-600">
+                            98%
+                        </h3>
+                        <p class="text-slate-500 dark:text-slate-400">
+                            Satisfaction
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Hero Image -->
+            <div class="relative">
+
+                <img
+                    src="/assets/images/8.jpg"
+                    alt="Home Organization Service"
+                    class="rounded-[40px]
+                           h-[650px]
+                           w-full
+                           object-cover
+                           shadow-2xl">
+
+                <!-- Floating Card -->
+                <div class="absolute
+                            -bottom-6
+                            left-6
+                            right-6
+                            bg-white/90
+                            dark:bg-slate-900/90
+                            backdrop-blur-xl
+                            rounded-3xl
+                            p-6
+                            shadow-xl">
+
+                    <div class="flex items-center justify-between">
+
+                        <div>
+                            <h4 class="font-bold
+                                       text-slate-900
+                                       dark:text-white">
+
+                                Whole Home Organization
+
+                            </h4>
+
+                            <p class="text-slate-500
+                                      dark:text-slate-400
+                                      mt-1">
+
+                                Customized systems for every room
+
+                            </p>
+                        </div>
+
+                        <span class="px-4 py-2 rounded-full
+                                     bg-violet-100
+                                     dark:bg-violet-500/10
+                                     text-violet-600
+                                     font-bold">
+
+                            Popular
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-white
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center
+                         px-4 py-2 rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                ✨ Our Services
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                Organization Solutions 
+
+                <span class="block
+                             bg-gradient-to-r
+                             from-violet-600
+                             via-purple-600
+                             to-fuchsia-600
+                             bg-clip-text
+                             text-transparent">
+
+                  For  Every Space
+
+                </span>
+
+            </h2>
+
+            <p class="mt-6 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Whether it's a single room or your entire
+                home, we create customized systems that
+                simplify everyday living.
+
+            </p>
+
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3
+                    gap-8 mt-16">
+
+            <!-- Service 1 -->
+           <div class="group
+            bg-white
+            dark:bg-slate-900
+            rounded-[30px]
+            overflow-hidden
+            border border-slate-200
+            dark:border-white/10
+            shadow-xl
+            hover:-translate-y-2
+            transition-all duration-300">
+
+    <!-- Image -->
+    <img
+        src="https://images.unsplash.com/photo-1556911220-bff31c812dba"
+        alt="Kitchen Organization"
+        class="h-64 w-full object-cover
+               group-hover:scale-105
+               transition duration-700">
+
+    <!-- Content -->
+    <div class="p-8">
+
+        <span class="inline-flex px-3 py-1
+                     rounded-full
+                     bg-violet-100
+                     dark:bg-violet-500/10
+                     text-violet-700
+                     dark:text-violet-300
+                     text-xs font-bold">
+
+            MOST POPULAR
+
+        </span>
+
+        <h3 class="mt-4 text-2xl font-black
+                   text-slate-900
+                   dark:text-white">
+
+            Kitchen Organization
+
+        </h3>
+
+        <p class="mt-3
+                  text-slate-600
+                  dark:text-slate-300">
+
+            Create functional kitchen systems,
+            pantry organization, and efficient
+            storage solutions for everyday living.
+
+        </p>
+
+        <!-- Benefits -->
+        <ul class="mt-6 space-y-3">
+
+            <li class="flex items-center gap-3
+                       text-slate-700
+                       dark:text-slate-300">
+
+                <span class="text-green-500 font-bold">✓</span>
+                Pantry Optimization
+
+            </li>
+
+            <li class="flex items-center gap-3
+                       text-slate-700
+                       dark:text-slate-300">
+
+                <span class="text-green-500 font-bold">✓</span>
+                Smart Storage Solutions
+
+            </li>
+
+            <li class="flex items-center gap-3
+                       text-slate-700
+                       dark:text-slate-300">
+
+                <span class="text-green-500 font-bold">✓</span>
+                Faster Meal Preparation
+
+            </li>
+
+            <li class="flex items-center gap-3
+                       text-slate-700
+                       dark:text-slate-300">
+
+                <span class="text-green-500 font-bold">✓</span>
+                Reduced Daily Clutter
+
+            </li>
+
+        </ul>
+
+        <!-- CTA -->
+        <a href="#"
+           class="inline-flex items-center gap-2
+                  mt-8
+                  text-violet-600
+                  dark:text-violet-400
+                  font-bold">
+
+            Learn More
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+            <!-- Service 2 -->
+            <div class="group
+                        bg-white
+                        dark:bg-slate-900
+                        rounded-[30px]
+                        overflow-hidden
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl
+                        hover:-translate-y-2
+                        transition-all duration-300">
+
+               <img
+    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8"
+    alt="Closet Organization"
+    class="h-64 w-full object-cover
+           group-hover:scale-105
+           transition duration-700">
+
+<div class="p-8">
+
+
+        <span class="inline-flex px-3 py-1 rounded-full
+             bg-pink-100 dark:bg-pink-500/10
+             text-pink-700 dark:text-pink-300
+             text-xs font-bold">
+    CLIENT FAVORITE
+</span>
+
+    <h3 class=" mt-4 text-2xl font-black
+               text-slate-900
+               dark:text-white">
+
+        Closet Organization
+
+    </h3>
+
+    <p class="mt-3
+              text-slate-600
+              dark:text-slate-300">
+
+        Maximize wardrobe space with
+        custom storage systems, folding
+        techniques, and easy accessibility.
+
+    </p>
+
+    <!-- Benefits -->
+    <ul class="mt-6 space-y-3">
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Maximize Closet Space
+
+        </li>
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Seasonal Wardrobe Storage
+
+        </li>
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Faster Outfit Selection
+
+        </li>
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Easy Access To Essentials
+
+        </li>
+
+    </ul>
+
+    <a href="#"
+       class="inline-flex items-center gap-2
+              mt-8
+              text-violet-600
+              dark:text-violet-400
+              font-bold">
+
+        Learn More
+        <span>→</span>
+
+    </a>
+
+</div>
+
+            </div>
+
+            <!-- Service 3 -->
+            <div class="group
+                        bg-white
+                        dark:bg-slate-900
+                        rounded-[30px]
+                        overflow-hidden
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl
+                        hover:-translate-y-2
+                        transition-all duration-300">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+                    alt="Home Office"
+                    class="h-64 w-full object-cover
+                           group-hover:scale-105
+                           transition duration-700">
+
+               
+
+<div class="p-8">
+
+    <!-- Badge -->
+    <span class="inline-flex px-3 py-1
+                 rounded-full
+                 bg-blue-100
+                 dark:bg-blue-500/10
+                 text-blue-700
+                 dark:text-blue-300
+                 text-xs font-bold">
+
+        PRODUCTIVITY BOOST
+
+    </span>
+
+    <h3 class="mt-4 text-2xl font-black
+               text-slate-900
+               dark:text-white">
+
+        Home Office Setup
+
+    </h3>
+
+    <p class="mt-3
+              text-slate-600
+              dark:text-slate-300">
+
+        Improve productivity with
+        organized workspaces and
+        document management systems.
+
+    </p>
+
+    <!-- Benefits -->
+    <ul class="mt-6 space-y-3">
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Increased Productivity
+
+        </li>
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Cable & Desk Management
+
+        </li>
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Organized Documents & Files
+
+        </li>
+
+        <li class="flex items-center gap-3
+                   text-slate-700
+                   dark:text-slate-300">
+
+            <span class="text-green-500 font-bold">✓</span>
+            Distraction-Free Workspace
+
+        </li>
+
+    </ul>
+
+    <a href="#"
+       class="inline-flex items-center gap-2
+              mt-8
+              text-violet-600
+              dark:text-violet-400
+              font-bold">
+
+        Learn More
+        <span>→</span>
+
+    </a>
+
+</div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="group
+                        bg-white
+                        dark:bg-slate-900
+                        rounded-[30px]
+                        overflow-hidden
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+             
+                  <img
+    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+    alt="Bedroom Organization"
+    class="h-64 w-full object-cover">
+
+<div class="p-8">
+
+    <!-- Tag -->
+    <span class="inline-flex px-3 py-1 rounded-full
+                 bg-violet-100 dark:bg-violet-500/10
+                 text-violet-700 dark:text-violet-300
+                 text-xs font-bold">
+
+        STRESS FREE
+
+    </span>
+
+    <!-- Title -->
+    <h3 class="mt-4 text-2xl font-black
+               text-slate-900 dark:text-white">
+
+        Bedroom Organization
+
+    </h3>
+
+    <!-- Description -->
+    <p class="mt-3 text-slate-600 dark:text-slate-300">
+
+        Create calm, clutter-free sleeping to the  own of the  spaces that promote client  to the success relaxation.
+
+    </p>
+
+    <!-- Benefits -->
+    <ul class="mt-5 space-y-3 text-sm
+               text-slate-600 dark:text-slate-300">
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Better Sleep Environment
+        </li>
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Decluttered Space
+        </li>
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Smart Storage Solutions
+        </li>
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Stress Reduction Setup
+        </li>
+
+    </ul>
+
+    <!-- Button -->
+    <a href="#"
+        class="inline-flex items-center gap-2
+              mt-8
+              text-violet-600
+              dark:text-violet-400
+              font-bold">
+
+        Learn More →
+
+    </a>
+
+</div>
+                   
+                    
+
+                
+
+            </div>
+
+            <!-- Service 5 -->
+            <div class="group
+                        bg-white
+                        dark:bg-slate-900
+                        rounded-[30px]
+                        overflow-hidden
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl  hover:-translate-y-2 transition-all duration-300">
+
+               <img
+    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+    alt="Garage Organization"
+    class="h-64 w-full object-cover  group-hover:scale-105
+               transition duration-700">
+
+<div class="p-8">
+
+    <!-- Tag -->
+    <span class="inline-flex px-3 py-1 rounded-full
+                 bg-cyan-100 dark:bg-cyan-500/10
+                 text-cyan-700 dark:text-cyan-300
+                 text-xs font-bold">
+
+        SPACE SAVER
+
+    </span>
+
+    <!-- Title -->
+    <h3 class="mt-4 text-2xl font-black
+               text-slate-900 dark:text-white">
+
+        Garage Organization
+
+    </h3>
+
+    <!-- Description -->
+    <p class="mt-3 text-slate-600 dark:text-slate-300">
+
+        Organize tools, equipment, of the Total number or an  and storage areas for maximum efficiency.
+
+    </p>
+
+    <!-- Benefits -->
+    <ul class="mt-5 space-y-3 text-sm
+               text-slate-600 dark:text-slate-300">
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Tool & Equipment Zoning
+        </li>
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Space Optimization System
+        </li>
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Heavy Storage Planning
+        </li>
+
+        <li class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">✓</span>
+            Easy Accessibility Setup
+        </li>
+
+    </ul>
+
+    <!-- Button -->
+    <a href="#"
+       class="inline-flex items-center gap-2
+              mt-8
+              text-violet-600
+              dark:text-violet-400
+              font-bold">
+
+        Learn More →
+
+    </a>
+
+</div>
+
+            </div>
+
+        <!-- Virtual Consultation Card -->
+<!-- Virtual Consultation Card -->
+<div class="group bg-white dark:bg-slate-900 rounded-[30px] overflow-hidden border border-slate-200 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-all duration-300">
+
+    <!-- Image -->
+    <img
+        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+        alt="Virtual Consultation"
+        class="h-64 w-full object-cover group-hover:scale-105 transition duration-700">
+
+    <!-- Content -->
+    <div class="p-8">
+
+        <!-- Tag -->
+        <span class="inline-flex px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 text-xs font-bold">
+            ONLINE SERVICE
+        </span>
+
+        <!-- Title -->
+        <h3 class="mt-4 text-2xl font-black text-slate-900 dark:text-white">
+            Virtual Consultation
+        </h3>
+
+        <!-- Description -->
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
+            Meet with our professional organizers remotely and receive personalized guidance from the comfort of your home.
+        </p>
+
+        <!-- Benefits -->
+        <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+
+            <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>
+                Video Consultation Sessions
+            </li>
+
+            <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>
+                Personalized Organization Plan
+            </li>
+
+            <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>
+                Expert Storage Recommendations
+            </li>
+
+            <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>
+                Flexible Scheduling Options
+            </li>
+
+        </ul>
+
+        <!-- CTA -->
+        <a href="#booking"
+           class="inline-flex items-center gap-2 mt-8 text-violet-600 dark:text-violet-400 font-bold">
+            Book Online Session →
+        </a>
+
+    </div>
+
+        
+
+    </div>
+
+</section>
+<!-- Background -->
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50 via-white to-slate-50
+                dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100 dark:bg-violet-500/10
+                         text-violet-700 dark:text-violet-300
+                         text-sm font-semibold">
+
+                💬 Client Stories
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl font-black
+                       text-slate-900 dark:text-white">
+
+                Real Homes
+                <span class="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500
+                             bg-clip-text text-transparent">Real Transformations
+                </span>
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600 dark:text-slate-300">
+
+                Hear what our clients say after transforming their homes with our expert team.
+
+            </p>
+
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mt-16">
+
+            <!-- Card 1 -->
+            <div class="p-8 rounded-3xl
+                        bg-white/80 dark:bg-white/5
+                        backdrop-blur-md
+                        border border-slate-200 dark:border-white/10
+                        shadow-xl">
+
+                <p class="text-slate-600 dark:text-slate-300">
+                    “My kitchen and bedroom finally feel organized.
+                    It changed my daily routine completely.”
+                </p>
+
+                <div class="mt-6 flex items-center gap-4">
+
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                         class="w-12 h-12 rounded-full">
+
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">
+                            Priya S
+                        </h4>
+                        <span class="text-sm text-slate-500">
+                            Homeowner
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="p-8 rounded-3xl
+                        bg-white/80 dark:bg-white/5
+                        backdrop-blur-md
+                        border border-slate-200 dark:border-white/10
+                        shadow-xl">
+
+                <p class="text-slate-600 dark:text-slate-300">
+                    “The team turned my cluttered house into a calm,
+                    functional space. Highly recommended!”
+                </p>
+
+                <div class="mt-6 flex items-center gap-4">
+
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                         class="w-12 h-12 rounded-full">
+
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">
+                            Arun K
+                        </h4>
+                        <span class="text-sm text-slate-500">
+                            Software Engineer
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div class="p-8 rounded-3xl
+                        bg-white/80 dark:bg-white/5
+                        backdrop-blur-md
+                        border border-slate-200 dark:border-white/10
+                        shadow-xl">
+
+                <p class="text-slate-600 dark:text-slate-300">
+                    “Professional, fast, and very practical solutions.
+                    My garage and closet are now perfect.”
+                </p>
+
+                <div class="mt-6 flex items-center gap-4">
+
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                         class="w-12 h-12 rounded-full">
+
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white">
+                            Meena R
+                        </h4>
+                        <span class="text-sm text-slate-500">
+                            Interior Client
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="relative py-24">
+
+    <!-- Background -->
+    <!-- Background -->
+<!-- Background -->
+<div class="absolute inset-0
+            bg-gradient-to-b
+            from-white via-slate-50 to-white
+            dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+</div>
+
+<div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto">
+
+        <span class="inline-flex items-center gap-2
+                     px-4 py-2 rounded-full
+                     bg-violet-100 dark:bg-violet-500/10
+                     text-violet-700 dark:text-violet-300
+                     text-sm font-semibold">
+            ✨ Benefits
+        </span>
+
+        <h2 class="mt-6 text-4xl md:text-5xl font-black text-slate-900 dark:text-white">
+            Why Our Clients
+            <span class="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
+                Love Us
+            </span>
+        </h2>
+
+        <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">
+            We focus on creating organized, stress-free, and highly functional living spaces.
+        </p>
+
+    </div>
+
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+<!-- Item 1 -->
+<div class="flex gap-6 items-center">
+
+    <div class="w-40 h-40 rounded-3xl overflow-hidden shadow-lg bg-slate-100 dark:bg-slate-800 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335"
+             class="w-full h-full object-cover hover:scale-110 transition duration-500"
+             alt="Stress Free">
+    </div>
+
+    <div>
+        <h3 class="text-xl font-black text-slate-900 dark:text-white">
+            Stress-Free Living
+        </h3>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">
+            Reduce mental clutter with organized spaces.
+        </p>
+    </div>
+
+</div>
+
+<!-- Item 2 -->
+<div class="flex gap-6 items-center">
+
+    <div class="w-40 h-40 rounded-3xl overflow-hidden shadow-lg bg-slate-100 dark:bg-slate-800 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+             class="w-full h-full object-cover hover:scale-110 transition duration-500"
+             alt="Save Time">
+    </div>
+
+    <div>
+        <h3 class="text-xl font-black text-slate-900 dark:text-white">
+            Save Time Daily
+        </h3>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">
+            Find everything instantly.
+        </p>
+    </div>
+
+</div>
+
+<!-- Item 3 -->
+<div class="flex gap-6 items-center">
+
+    <div class="w-40 h-40 rounded-3xl overflow-hidden shadow-lg bg-slate-100 dark:bg-slate-800 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+             class="w-full h-full object-cover hover:scale-110 transition duration-500"
+             alt="Storage">
+    </div>
+
+    <div>
+        <h3 class="text-xl font-black text-slate-900 dark:text-white">
+            Smart Storage
+        </h3>
+        <p class="text-slate-600 dark:text-slate-300 mt-2">
+            Efficient storage systems.
+        </p>
+    </div>
+
+</div>
+
+    
+
+</div>
+</section>
+<section class="relative py-20">
+
+   
+<!-- Background -->
+<div class="absolute inset-0
+            bg-gradient-to-r
+            from-violet-50 via-white to-fuchsia-50
+            dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+</div>
+
+<div class="relative max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-10 items-center
+                bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10
+                rounded-3xl shadow-xl p-10 relative overflow-hidden">
+
+        <!-- Left Image -->
+        <div class="hidden lg:block">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+                 class="rounded-2xl object-cover h-full w-full shadow-lg hover:scale-105 transition duration-500"
+                 alt="Offer Image">
+        </div>
+
+        <!-- Right Content -->
+        <div class="text-center lg:text-left">
+
+            <!-- Badge -->
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-100 text-red-600 dark:bg-red-500/10 dark:text-red-300 text-sm font-bold">
+                ⏰ Limited Time Offer
+            </span>
+
+            <!-- Heading -->
+            <h2 class="mt-6 text-4xl md:text-5xl font-black text-slate-900 dark:text-white">
+                Month-End
+                <span class="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
+                    Special Offer
+                </span>
+            </h2>
+
+            <!-- Text -->
+            <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                Book before the month ends and get up to
+                <span class="font-bold text-violet-600">20% OFF</span>
+                on all home organization packages.
+            </p>
+
+            <!-- Points -->
+            <div class="mt-6 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+
+                <div>🎁 Free consultation included</div>
+                <div>🚚 Priority scheduling</div>
+                <div>💰 Save up to 20%</div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                <a href="#booking"
+                   class="px-4 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-purple-600 text-white font-bold shadow-xl hover:scale-105 transition">
+                    Claim Offer Now
+                </a>
+
+                <a href="#packages"
+                   class="px-4 py-4 rounded-xl
+                          border border-violet-400
+                          text-violet-700 dark:text-violet-200
+                          hover:bg-violet-100 dark:hover:bg-violet-900
+                          transition">
+                    View Packages
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</section>
+<section class="relative py-24">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-white via-slate-50 to-white
+                dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100 dark:bg-violet-500/10
+                         text-violet-700 dark:text-violet-300
+                         text-sm font-semibold">
+                💼 Packages
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl font-black text-slate-900 dark:text-white">
+                Choose Your
+                <span class="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
+                    Perfect Plan
+                </span>
+            </h2>
+
+            <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">
+                Flexible pricing options for every home and lifestyle.
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-8 mt-16">
+
+            <!-- Basic -->
+            <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xl hover:-translate-y-2 transition">
+
+                <h3 class="text-xl font-black text-slate-900 dark:text-white">
+                    Basic Plan
+                </h3>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-300">
+                    Small rooms & basic organization
+                </p>
+
+                <div class="mt-6 text-3xl font-black text-violet-600">
+                    ₹2,999
+                </div>
+
+                <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <li>✓ Room decluttering</li>
+                    <li>✓ Basic storage setup</li>
+                    <li>✓ 1 consultation</li>
+                    <li>✓ Free Suggestion</li>
+                </ul>
+
+                <a href="#booking"
+                   class="inline-block mt-8 w-full text-center px-6 py-3 rounded-2xl bg-violet-600 text-white font-bold hover:bg-violet-700 transition">
+                    Get Started
+                </a>
+
+            </div>
+
+            <!-- Popular -->
+            <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border-2 border-violet-500 shadow-2xl scale-105 hover:-translate-y-2 transition relative">
+
+                <!-- Badge -->
+                <span class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-violet-600 text-white text-xs font-bold">
+                    MOST POPULAR
+                </span>
+
+                <h3 class="text-xl font-black text-slate-900 dark:text-white">
+                    Standard Plan
+                </h3>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-300">
+                    Full home organization support
+                </p>
+
+                <div class="mt-6 text-3xl font-black text-violet-600">
+                    ₹6,999
+                </div>
+
+                <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <li>✓ Multiple rooms</li>
+                    <li>✓ Smart storage design</li>
+                    <li>✓ 2 consultations</li>
+                    <li>✓ Personalized plan</li>
+                </ul>
+
+                <a href="#booking"
+                   class="inline-block mt-8 w-full text-center px-6 py-3 rounded-2xl bg-violet-600 text-white font-bold hover:bg-violet-700 transition">
+                    Book Now
+                </a>
+
+            </div>
+
+            <!-- Premium -->
+            <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xl hover:-translate-y-2 transition">
+
+                <h3 class="text-xl font-black text-slate-900 dark:text-white">
+                    Premium Plan
+                </h3>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-300">
+                    Full home transformation
+                </p>
+
+                <div class="mt-6 text-3xl font-black text-violet-600">
+                    ₹12,999
+                </div>
+
+                <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <li>✓ Entire home setup</li>
+                    <li>✓ Premium storage systems</li>
+                    <li>✓ Unlimited consultations</li>
+                    <li>✓ Priority support</li>
+                </ul>
+
+                <a href="#booking"
+                   class="inline-block mt-8 w-full text-center px-6 py-3 rounded-2xl bg-violet-600 text-white font-bold hover:bg-violet-700 transition">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA Section -->
+<section class="relative py-24">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-violet-50 via-white to-violet-50
+                dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 text-center">
+
+        <!-- Badge -->
+        <span class="inline-flex items-center gap-2
+                     px-4 py-2 rounded-full
+                     bg-violet-100 dark:bg-violet-500/10
+                     text-violet-700 dark:text-violet-300
+                     text-sm font-semibold">
+
+            🚀 Get Started Today
+
+        </span>
+
+        <!-- Heading -->
+        <h2 class="mt-6 text-4xl md:text-5xl font-black text-slate-900 dark:text-white">
+
+            Ready to
+            <span class="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
+                Transform Your Space?
+            </span>
+
+        </h2>
+
+        <!-- Description -->
+        <p class="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+
+            Book a free consultation with our professional organizers and start building a clean, stress-free, and beautiful home.
+
+        </p>
+
+        <!-- Buttons -->
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+
+            <!-- Primary CTA -->
+            <a href="#booking"
+               class="px-8 py-4 rounded-2xl bg-violet-600 text-white font-bold shadow-lg hover:bg-violet-700 transition">
+
+                Book Free Consultation
+
+            </a>
+
+            <!-- Secondary CTA -->
+            <a href="#services"
+               class="px-8 py-4 rounded-2xl border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white font-bold hover:bg-slate-100 dark:hover:bg-white/10 transition">
+
+                Explore Services
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+ <footer class="relative overflow-hidden bg-white
+dark:bg-slate-950">
+
+    
+
+    <!-- Glow Effects -->
+    <div class="absolute top-0 left-0 w-80 h-80
+                bg-violet-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80
+                bg-purple-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Top Footer -->
+        <div class="grid lg:grid-cols-4 gap-12 py-20">
+
+            <!-- Brand -->
+            <div>
+
+                <div class="flex items-center gap-3">
+
+                    <div class="w-12 h-12 rounded-2xl
+                                bg-gradient-to-br
+                                from-violet-500
+                                to-purple-600
+                                flex items-center justify-center
+                                text-white text-xl">
+
+                    <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+
+                    </div>
+
+                    <h3 class="text-xl font-black  text-violet-700 dark:text-white">
+                        Home Organizer
+                    </h3>
+
+                </div>
+
+                <p class="mt-6 text-slate-900 dark:text-white leading-relaxed">
+
+                    Professional home organization and
+                    decluttering solutions that transform
+                    everyday spaces into peaceful,
+                    functional environments.
+
+                </p>
+
+                <!-- Social -->
+             <div class="flex gap-4 mt-8">
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+   
+
+</div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h4 class="text-lg font-bold text-violet-700 dark:text-white">
+                    Quick Links
+                </h4>
+
+                <ul class="mt-6 space-y-4 ">
+
+                    <li >
+                        <a href="#"
+                           class= "text-slate-900 dark:text-white  hover:text-violet-400  transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white  hover:text-violet-400 transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="  text-slate-900 dark:text-white  hover:text-violet-400 transition">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div>
+
+                <h4 class="text-lg font-bold text-violet-700 dark:text-white">
+                    Services
+                </h4>
+
+                <ul class="mt-6 space-y-4">
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Kitchen Organization
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Closet Makeovers
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Home Office Setup
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Garage Organization
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Full Home Decluttering
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+
+                <h4 class="text-lg font-bold  text-violet-700 dark:text-white"">
+                    Stay Updated
+                </h4>
+
+                <p class="mt-6  text-slate-900 dark:text-white">
+
+                    Get organizing tips, storage ideas,
+                    and exclusive offers delivered
+                    directly to your inbox.
+
+                </p>
+
+                <form class="mt-6 ">
+
+                    <input
+                        type="email"
+                        placeholder="Your Email Address"
+                        class="w-full px-5 py-4 rounded-2xl
+                               bg-white/10
+                               border border-white/10
+                               text-white
+                               placeholder-slate-600
+                               focus:outline-none
+                               focus:border-violet-500">
+
+                    <button
+                        class="w-full mt-4 py-4 rounded-2xl
+                               bg-gradient-to-r
+                               from-violet-600
+                               to-purple-600
+                               text-white
+                               font-semibold">
+
+                        Subscribe Now
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-white/10
+                    py-8">
+
+            <div class="flex flex-col md:flex-row
+                        items-center justify-between
+                        gap-4">
+
+                <p class=" text-slate-900 dark:text-white text-center md:text-left">
+
+                    © 2026 Home Organizer. All rights reserved.
+
+                </p>
+
+                <div class="flex gap-6">
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Terms of Service
+                    </a>
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Cookies
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/output.css">
+
+
+<title>Home Organizer & Decluttering Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>body { font-family: 'Outfit', sans-serif; }</style>
+</head>
+
+<body>
+<nav class="fixed top-0 z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 w-full">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+       <a href="/" class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-violet-600 text-white flex items-center justify-center font-bold">
+          <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+        </div>
+        <span class="font-bold text-violet-700 dark:text-white">Home Organizer</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="/" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Home</a>
+        <a href="about.html" class="px-4 py-2 rounded-full bg-violet-500 text-white font-medium">About</a>
+        <a href="service.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Services</a>
+        <a href="gallery.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Gallery</a>
+    
+        <a href="contact.html" class="px-4 py-2 rounded-full text-slate-700 dark:text-violet-200 hover:bg-slate-100 dark:hover:bg-violet-900 transition">Contact</a>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <button id="themeToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-180 transition">🌙</button>
+        <button id="rtlToggle" class="h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:rotate-[360deg] transition">⇄</button>
+        <a href="login.html" class="px-5 py-2 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold shadow-lg hover:shadow-violet-500/30 transition">Login</a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden h-10 w-10 flex items-center justify-center rounded-xl bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">
+        ☰
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden absolute top-16 left-0 w-full z-50 bg-white dark:bg-violet-950 border-b border-violet-500/20 px-6 py-6 flex flex-col gap-4 shadow-xl">
+  
+  <a href="/" class="block py-2 text-slate-700 dark:text-violet-200">Home</a>
+    <a href="about.html" class="block px-4 py-2 text-slate-700 rounded-full  bg-violet-500  dark:text-violet-200">About</a>
+  <a href="service.html" class="block py-2 text-slate-700 dark:text-violet-200">Services</a>
+  <a href="gallery.html" class="block py-2 text-slate-700 dark:text-violet-200">Gallery</a>
+ 
+  <a href="contact.html" class="block py-2 text-slate-700 dark:text-violet-200">Contact</a>
+  
+  <div class="flex items-center gap-4 pt-4 border-t border-violet-500/10">
+    <button id="themeTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">Theme</button>
+    <button id="rtlTogglemobile" class="flex-1 py-2 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300">RTL</button>
+  </div>
+  
+  <a href="#" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold">Login</a>
+</div>
+  </div>
+</nav>
+<main>
+    <!-- ABOUT HERO -->
+<section class="relative overflow-hidden py-24 lg:py-32">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50
+                via-white
+                to-slate-50
+                dark:from-slate-900
+                dark:via-slate-950
+                dark:to-slate-900">
+    </div>
+
+    <!-- Glow Effects -->
+    <div class="absolute top-10 left-10 w-72 h-72
+                bg-violet-400/20
+                dark:bg-violet-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="absolute bottom-10 right-10 w-72 h-72
+                bg-purple-400/20
+                dark:bg-purple-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left Content -->
+            <div>
+
+                <!-- Badge -->
+                <span class="inline-flex items-center gap-2
+                             px-4 py-2 rounded-full
+                             bg-white/80
+                             dark:bg-white/10
+                             backdrop-blur-md
+                             border border-violet-200
+                             dark:border-violet-500/20
+                             text-violet-700
+                             dark:text-violet-200
+                             text-sm font-semibold">
+
+                    🏡 About Home Organizer
+
+                </span>
+
+                <!-- Heading -->
+                <h1 class="mt-8 text-5xl md:text-6xl lg:text-7xl
+                           font-black leading-tight
+                           text-slate-900 dark:text-white">
+
+                    Creating
+
+                    <span class="bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent">
+
+                        Organized Homes
+
+                    </span>
+
+                    & Peaceful Living
+
+                </h1>
+
+                <!-- Description -->
+                <p class="mt-6 text-lg md:text-xl
+                          text-slate-600 dark:text-slate-300
+                          max-w-2xl">
+
+                    We help families and professionals
+                    transform cluttered spaces into
+                    functional, beautiful environments.
+                    Our mission is to make organization
+                    simple, stress-free, and sustainable.
+
+                </p>
+
+                <!-- Buttons -->
+                <div class="mt-10 flex flex-wrap gap-4">
+
+                    <a href="#story"
+                       class="px-4 py-3 rounded-xl
+                              bg-gradient-to-r
+                              from-violet-600
+                              to-purple-600
+                              text-white font-semibold
+                              shadow-xl shadow-violet-500/30
+                              hover:scale-105
+                              transition-all">
+
+                        Our Story
+
+                    </a>
+
+                    <a href="#team"
+                       class="px-4 py-3 rounded-xl
+                          border border-violet-400
+                          text-violet-700 dark:text-violet-200
+                          hover:bg-violet-100 dark:hover:bg-violet-900
+                          transition">
+                             
+                        Meet The Team
+
+                    </a>
+
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-4 mt-12">
+
+                    <div class="text-left">
+                        <h3 class="text-3xl font-black text-violet-600">
+                            5K+
+                        </h3>
+                        <p class="text-sm text-slate-500">
+                            Happy Clients
+                        </p>
+                    </div>
+
+                    <div class="text-left">
+                        <h3 class="text-3xl font-black text-violet-600">
+                            12K+
+                        </h3>
+                        <p class="text-sm text-slate-500">
+                            Rooms Organized
+                        </p>
+                    </div>
+
+                    <div class="text-left">
+                        <h3 class="text-3xl font-black text-violet-600">
+                            98%
+                        </h3>
+                        <p class="text-sm text-slate-500">
+                            Satisfaction
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="relative">
+
+                <div class="rounded-3xl overflow-hidden
+                            shadow-2xl">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
+                        alt="About Home Organizer"
+                        class="w-full h-[600px] object-cover">
+
+                </div>
+
+                <!-- Floating Card -->
+                <div class="absolute -bottom-6 -left-6
+                            bg-white dark:bg-slate-900
+                            rounded-2xl
+                            p-6
+                            shadow-2xl">
+
+                    <div class="space-y-2">
+
+    <h4 class="text-lg font-bold tracking-tight
+               text-slate-900 dark:text-white">
+
+        Trusted By Families
+
+    </h4>
+
+    <p class="text-sm leading-relaxed
+              text-slate-600 dark:text-slate-300
+              max-w-sm">
+
+        Helping create organized, stress-free homes
+        with thoughtful design and lasting systems
+        since 2020.
+
+    </p>
+
+    <!-- Accent line -->
+    <div class="w-12 h-[2px] mt-3
+                bg-gradient-to-r
+                from-violet-500
+                to-purple-500
+                rounded-full">
+    </div>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- OUR STORY -->
+<section id="story" class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-white
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Images -->
+            <div class="relative">
+
+                <div class="grid grid-cols-2 gap-4">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+                        alt="Organized Living Room"
+                        class="rounded-3xl h-80 w-full object-cover">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
+                        alt="Home Organization"
+                        class="rounded-3xl h-80 w-full object-cover mt-12">
+
+                </div>
+
+                <!-- Floating Achievement Card -->
+                <div class="absolute bottom-0 left-1/2
+                            -translate-x-1/2
+                            bg-white dark:bg-slate-900
+                            rounded-2xl
+                            shadow-2xl
+                            p-5">
+
+                    <h4 class="text-2xl font-black text-violet-600">
+                        6+
+                    </h4>
+
+                    <p class="text-slate-500 text-sm">
+                        Years Experience
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div>
+
+                <span class="inline-flex items-center gap-2
+                             px-4 py-2 rounded-full
+                             bg-violet-100
+                             dark:bg-violet-500/10
+                             text-violet-700
+                             dark:text-violet-300
+                             text-sm font-semibold">
+
+                    📖 Our Story
+
+                </span>
+
+                <h2 class="mt-6 text-4xl md:text-5xl
+                           font-black
+                           text-slate-900
+                           dark:text-white">
+
+                    Helping Families Live 
+
+                    <span class="bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent">
+                                 
+
+                       Better Organization
+
+                    </span>
+
+                </h2>
+
+                <p class="mt-6 text-lg
+                          text-slate-600
+                          dark:text-slate-300">
+
+                    Home Organizer was founded with a simple
+                    belief: an organized home creates a calmer,
+                    happier life. What started as a small local
+                    organizing service has grown into a trusted
+                    platform helping thousands of families
+                    transform their living spaces.
+
+                </p>
+
+                
+
+                <!-- Timeline -->
+                <div class="mt-10 space-y-6">
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 rounded-xl
+                                    bg-violet-100
+                                    dark:bg-violet-500/10
+                                    flex items-center justify-center
+                                    font-bold text-violet-600">
+
+                            2020
+
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">
+                                Company Founded
+                            </h4>
+                            <p class="text-slate-500">
+                                Started with a mission to simplify home organization.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 rounded-xl
+                                    bg-violet-100
+                                    dark:bg-violet-500/10
+                                    flex items-center justify-center
+                                    font-bold text-violet-600">
+
+                            2023
+
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">
+                                2,500+ Clients Served
+                            </h4>
+                            <p class="text-slate-500">
+                                Expanded services and virtual consultations.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 rounded-xl
+                                    bg-violet-100
+                                    dark:bg-violet-500/10
+                                    flex items-center justify-center
+                                    font-bold text-violet-600">
+
+                            2026
+
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">
+                                Industry Leader
+                            </h4>
+                            <p class="text-slate-500">
+                                Helping thousands of homeowners stay organized.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- MISSION & VISION -->
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50
+                via-white
+                to-slate-50
+                dark:from-slate-900
+                dark:via-slate-950
+                dark:to-slate-900">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                🌟 Our Purpose
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                Driven By Purpose,
+
+                <span class="bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent">
+
+                    Inspired By Impact
+
+                </span>
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Everything we do is focused on helping
+                people create organized, functional,
+                and stress-free living spaces.
+
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+     <!-- Features -->
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-white/5
+            rounded-3xl overflow-hidden
+            border border-slate-200
+            dark:border-white/10
+            shadow-xl hover:-translate-y-2
+            transition-all duration-500">
+
+    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
+         class="w-full h-64 object-cover group-hover:scale-105 transition duration-700">
+
+    <div class="p-8">
+
+        <span class="text-xs uppercase tracking-[0.25em]
+                     text-violet-600 font-bold">
+            ORGANIZATION
+        </span>
+
+        <h3 class="mt-3 text-2xl font-black
+                   text-slate-900 dark:text-white">
+            Professional Organizers
+        </h3>
+
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+            Work with experienced specialists who
+            transform cluttered spaces into beautiful
+            and functional environments.
+        </p>
+<!-- Button -->
+<a href="#"
+   class="inline-flex items-center gap-2
+          mt-6 px-6 py-3 rounded-2xl
+
+          bg-violet-600
+          text-white font-semibold
+
+          shadow-lg
+          hover:bg-violet-700
+          hover:scale-105
+          transition-all duration-300">
+
+    Learn More
+
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+
+</a>
+    </div>
+    
+
+</div>
+
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-white/5
+            rounded-3xl overflow-hidden
+            border border-slate-200
+            dark:border-white/10
+            shadow-xl hover:-translate-y-2
+            transition-all duration-500">
+
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+         class="w-full h-64 object-cover group-hover:scale-105 transition duration-700">
+
+    <div class="p-8">
+
+        <span class="text-xs uppercase tracking-[0.25em]
+                     text-violet-600 font-bold">
+            PLANNING
+        </span>
+
+        <h3 class="mt-3 text-2xl font-black
+                   text-slate-900 dark:text-white">
+            Custom Organization Plans
+        </h3>
+
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+            Every solution is tailored to your
+            lifestyle,functional environments storage needs, and daily routines.
+        </p>
+<!-- Button -->
+<a href="#"
+   class="inline-flex items-center gap-2
+          mt-6 px-6 py-3 rounded-2xl
+
+          bg-violet-600
+          text-white font-semibold
+
+          shadow-lg
+          hover:bg-violet-700
+          hover:scale-105
+          transition-all duration-300">
+
+    Learn More
+
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+
+</a>
+    </div>
+
+</div>
+
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-white/5
+            rounded-3xl overflow-hidden
+            border border-slate-200
+            dark:border-white/10
+            shadow-xl hover:-translate-y-2
+            transition-all duration-500">
+
+    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+         class="w-full h-64 object-cover group-hover:scale-105 transition duration-700">
+
+    <div class="p-8">
+
+        <span class="text-xs uppercase tracking-[0.25em]
+                     text-violet-600 font-bold">
+            DASHBOARD
+        </span>
+
+        <h3 class="mt-3 text-2xl font-black
+                   text-slate-900 dark:text-white">
+            Client Dashboard
+        </h3>
+
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+            Upload room photos, functional environments review plans,
+            approve projects, and track progress online.
+        </p>
+<!-- Button -->
+<a href="#"
+   class="inline-flex items-center gap-2
+          mt-6 px-6 py-3 rounded-2xl
+
+          bg-violet-600
+          text-white font-semibold
+
+          shadow-lg
+          hover:bg-violet-700
+          hover:scale-105
+          transition-all duration-300">
+
+    Learn More
+
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+
+</a>
+    </div>
+
+</div>
+
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-white/5
+            rounded-3xl overflow-hidden
+            border border-slate-200
+            dark:border-white/10
+            shadow-xl hover:-translate-y-2
+            transition-all duration-500">
+
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+         class="w-full h-64 object-cover group-hover:scale-105 transition duration-700">
+
+    <div class="p-8">
+
+        <span class="text-xs uppercase tracking-[0.25em]
+                     text-violet-600 font-bold">
+            STORAGE
+        </span>
+
+        <h3 class="mt-3 text-2xl font-black
+                   text-slate-900 dark:text-white">
+            Smart Storage Solutions
+        </h3>
+
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+            Discover efficient functional environments storage systems,
+            containers, shelving, and organization tools.
+        </p>
+<!-- Button -->
+<a href="#"
+   class="inline-flex items-center gap-2
+          mt-6 px-6 py-3 rounded-2xl
+
+          bg-violet-600
+          text-white font-semibold
+
+          shadow-lg
+          hover:bg-violet-700
+          hover:scale-105
+          transition-all duration-300">
+
+    Learn More
+
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+
+</a>
+    </div>
+
+</div>
+
+<!-- Card 5 -->
+<div class="group bg-white dark:bg-white/5
+            rounded-3xl overflow-hidden
+            border border-slate-200
+            dark:border-white/10
+            shadow-xl hover:-translate-y-2
+            transition-all duration-500">
+
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+         class="w-full h-64 object-cover group-hover:scale-105 transition duration-700">
+
+    <div class="p-8">
+
+        <span class="text-xs uppercase tracking-[0.25em]
+                     text-violet-600 font-bold">
+            CONSULTATION
+        </span>
+
+        <h3 class="mt-3 text-2xl font-black
+                   text-slate-900 dark:text-white">
+            Virtual Consultations
+        </h3>
+
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+            Meet with our experts remotely and
+            receive personalized  functional environments Organization advice.
+        </p>
+<!-- Button -->
+<a href="#"
+   class="inline-flex items-center gap-2
+          mt-6 px-6 py-3 rounded-2xl
+
+          bg-violet-600
+          text-white font-semibold
+
+          shadow-lg
+          hover:bg-violet-700
+          hover:scale-105
+          transition-all duration-300">
+
+    Learn More
+
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+
+</a>
+    </div>
+
+</div>
+
+<!-- Card 6 -->
+<div class="group bg-white dark:bg-white/5
+            rounded-3xl overflow-hidden
+            border border-slate-200
+            dark:border-white/10
+            shadow-xl hover:-translate-y-2
+            transition-all duration-500">
+
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+         class="w-full h-64 object-cover group-hover:scale-105 transition duration-700">
+
+    <div class="p-8">
+
+        <span class="text-xs uppercase tracking-[0.25em]
+                     text-violet-600 font-bold">
+            SUPPORT
+        </span>
+
+        <h3 class="mt-3 text-2xl font-black
+                   text-slate-900 dark:text-white">
+            Long-Term Maintenance
+        </h3>
+
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+            Ongoing guidance and support to help
+            maintain an organized  functional environments lifestyle for years.
+        </p>
+<!-- Button -->
+<a href="#"
+   class="inline-flex items-center gap-2
+          mt-6 px-6 py-3 rounded-2xl
+
+          bg-violet-600
+          text-white font-semibold
+
+          shadow-lg
+          hover:bg-violet-700
+          hover:scale-105
+          transition-all duration-300">
+
+    Learn More
+
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+
+</a>
+    </div>
+
+</div>
+
+
+</div>
+
+    </div>
+
+</section>
+<!-- WHY CHOOSE US -->
+<!-- SECTION WRAPPER (IMPORTANT FOR DARK MODE) -->
+<section class="relative py-24
+                bg-white dark:bg-slate-950
+                transition-colors duration-300">
+
+    <!-- Background gradient -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50 via-white to-slate-50
+                dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100 dark:bg-violet-500/10
+                         text-violet-700 dark:text-violet-300
+                         text-sm font-semibold">
+
+                ⭐ Why Choose Us
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl font-black
+                       text-slate-900 dark:text-white">
+
+                A Better Way To
+              <span class=" bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent"> Organize Your Home</span>
+
+            </h2>
+
+        </div>
+
+        <!-- FEATURE GRID -->
+        <div class="space-y-24">
+
+            <!-- FEATURE 1 -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
+                     class="rounded-3xl h-[420px] w-full object-cover
+                            shadow-xl dark:shadow-black/50">
+
+                <div class="space-y-5">
+
+                    <div class="w-14 h-14 rounded-2xl
+                                bg-violet-100 dark:bg-violet-500/10
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-house-user text-2xl
+                                  text-violet-600 dark:text-violet-300"></i>
+
+                    </div>
+
+                    <h3 class="text-3xl font-black
+                               text-slate-900 dark:text-white">
+
+                        Expert Organizers
+
+                    </h3>
+
+                    <p class="text-lg text-slate-600 dark:text-slate-300">
+
+                        Professional organizers transform your home into a clean, functional space.
+
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- FEATURE 2 -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <div class="order-2 lg:order-1 space-y-5">
+
+                    <div class="w-14 h-14 rounded-2xl
+                                bg-purple-100 dark:bg-purple-500/10
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-clipboard-list text-2xl
+                                  text-purple-600 dark:text-purple-300"></i>
+
+                    </div>
+
+                    <h3 class="text-3xl font-black
+                               text-slate-900 dark:text-white">
+
+                        Personalized Plans
+
+                    </h3>
+
+                    <p class="text-lg text-slate-600 dark:text-slate-300">
+
+                        Custom organization plans tailored to your lifestyle and needs.
+
+                    </p>
+
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+                     class="order-1 lg:order-2 rounded-3xl h-[420px] w-full object-cover
+                            shadow-xl dark:shadow-black/50">
+
+            </div>
+<!-- FEATURE 3 -->
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+
+    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952"
+         class="rounded-3xl h-[420px] w-full object-cover
+                shadow-xl dark:shadow-black/50">
+
+    <div class="space-y-5">
+
+        <div class="w-14 h-14 rounded-2xl
+                    bg-fuchsia-100 dark:bg-fuchsia-500/10
+                    flex items-center justify-center">
+
+            <i class="fa-solid fa-chart-line text-2xl
+                      text-fuchsia-600 dark:text-fuchsia-300"></i>
+
+        </div>
+
+        <h3 class="text-3xl font-black
+                   text-slate-900 dark:text-white">
+
+            Smart Dashboard Tracking
+
+        </h3>
+
+        <p class="text-lg text-slate-600 dark:text-slate-300">
+
+            Monitor your home organization progress,
+            track tasks, and manage everything in one place.
+
+        </p>
+
+    </div>
+</div>
+
+
+<!-- FEATURE 4 -->
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+
+    <div class="order-2 lg:order-1 space-y-5">
+
+        <div class="w-14 h-14 rounded-2xl
+                    bg-green-100 dark:bg-green-500/10
+                    flex items-center justify-center">
+
+            <i class="fa-solid fa-headset text-2xl
+                      text-green-600 dark:text-green-300"></i>
+
+        </div>
+
+        <h3 class="text-3xl font-black
+                   text-slate-900 dark:text-white">
+
+            Ongoing Support & Guidance
+
+        </h3>
+
+        <p class="text-lg text-slate-600 dark:text-slate-300">
+
+            We help you maintain long-term organization habits
+            so your home stays clutter-free forever.
+
+        </p>
+
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f"
+         class="order-1 lg:order-2 rounded-3xl h-[420px] w-full object-cover
+                shadow-xl dark:shadow-black/50">
+
+</div>
+
+
+<!-- CTA SECTION -->
+<div class="mt-28 text-center">
+
+    <h3 class="text-3xl md:text-4xl font-black
+               text-slate-900 dark:text-white">
+
+        Ready to transform your home?
+
+    </h3>
+
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+
+        Start your organization journey today with expert guidance.
+
+    </p>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+
+        <a href="#"
+           class="px-8 py-4 rounded-2xl
+                  bg-violet-600 text-white font-semibold
+                  hover:bg-violet-700 hover:scale-105
+                  transition-all">
+
+            Get Started
+
+        </a>
+
+        <a href="#"
+           class="px-8 py-4 rounded-2xl
+                  bg-white/70 dark:bg-white/10
+                  text-slate-900 dark:text-white
+                  border border-slate-200 dark:border-white/10
+                  backdrop-blur-md
+                  hover:scale-105 transition-all">
+
+            View Demo
+
+        </a>
+
+    </div>
+
+</div>
+        </div>
+
+    </div>
+
+</section>
+<!-- MEET OUR TEAM -->
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50
+                via-white
+                to-slate-50
+                dark:from-slate-900
+                dark:via-slate-950
+                dark:to-slate-900">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                👥 Meet Our Team
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                The Experts Behind
+
+                <span class="bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent">
+
+                    Every Organized Space
+
+                </span>
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Our professional organizers work
+                closely with every client to create
+                beautiful, practical, and stress-free
+                living environments.
+
+            </p>
+
+        </div>
+
+        <!-- Team Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+
+            <!-- Team Member -->
+            <div class="group
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        text-center
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl
+                        hover:-translate-y-2
+                        transition-all">
+
+                <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                    alt="Sarah Johnson"
+                    class="w-36 h-36 mx-auto
+                           rounded-full
+                           object-cover
+                           border-4 border-violet-500
+                           group-hover:scale-105
+                           transition">
+
+                <h3 class="mt-6 text-xl font-bold
+                           text-slate-900
+                           dark:text-white">
+
+                    Sarah Johnson
+
+                </h3>
+
+                <p class="mt-2 text-violet-600">
+                    Lead Organizer
+                </p>
+
+                <div class="flex justify-center gap-3 mt-5">
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Team Member -->
+            <div class="group
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        text-center
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl
+                        hover:-translate-y-2
+                        transition-all">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+                    alt="David Miller"
+                    class="w-36 h-36 mx-auto
+                           rounded-full
+                           object-cover
+                           border-4 border-purple-500">
+
+                <h3 class="mt-6 text-xl font-bold
+                           text-slate-900
+                           dark:text-white">
+
+                    David Miller
+
+                </h3>
+
+                <p class="mt-2 text-purple-600">
+                    Storage Specialist
+                </p>
+
+                <div class="flex justify-center gap-3 mt-5">
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Team Member -->
+            <div class="group
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        text-center
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl
+                        hover:-translate-y-2
+                        transition-all">
+
+                <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+                    alt="Emma Wilson"
+                    class="w-36 h-36 mx-auto
+                           rounded-full
+                           object-cover
+                           border-4 border-fuchsia-500">
+
+                <h3 class="mt-6 text-xl font-bold
+                           text-slate-900
+                           dark:text-white">
+
+                    Emma Wilson
+
+                </h3>
+
+                <p class="mt-2 text-fuchsia-600">
+                    Client Success Manager
+                </p>
+
+                <div class="flex justify-center gap-3 mt-5">
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Team Member -->
+            <div class="group
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        text-center
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl
+                        hover:-translate-y-2
+                        transition-all">
+
+                <img
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
+                    alt="James Brown"
+                    class="w-36 h-36 mx-auto
+                           rounded-full
+                           object-cover
+                           border-4 border-cyan-500">
+
+                <h3 class="mt-6 text-xl font-bold
+                           text-slate-900
+                           dark:text-white">
+
+                    James Brown
+
+                </h3>
+
+                <p class="mt-2 text-cyan-600">
+                    Virtual Consultant
+                </p>
+
+                <div class="flex justify-center gap-3 mt-5">
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-10 h-10 rounded-xl
+                              bg-slate-100
+                              dark:bg-white
+                              flex items-center justify-center">
+
+                        <i class="fab fa-x-twitter"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ACHIEVEMENTS -->
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-white
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                📊 Our Achievements
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                Trusted By Thousands
+                Of <span class="bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent">Happy Homeowners</span>
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Numbers that reflect our commitment
+                to creating organized and stress-free
+                living spaces.
+
+            </p>
+
+        </div>
+
+        <!-- Stats -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4
+                    gap-8 mt-16">
+
+            <!-- Stat -->
+            <div class="text-center
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        border border-slate-200
+                        dark:border-white/10">
+
+                <h3 class="text-5xl font-black
+                           text-violet-600">
+                    5K+
+                </h3>
+
+                <p class="mt-3 text-slate-600
+                          dark:text-slate-300">
+                    Happy Clients
+                </p>
+
+            </div>
+
+            <div class="text-center
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        border border-slate-200
+                        dark:border-white/10">
+
+                <h3 class="text-5xl font-black
+                           text-purple-600">
+                    12K+
+                </h3>
+
+                <p class="mt-3 text-slate-600
+                          dark:text-slate-300">
+                    Rooms Organized
+                </p>
+
+            </div>
+
+            <div class="text-center
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        border border-slate-200
+                        dark:border-white/10">
+
+                <h3 class="text-5xl font-black
+                           text-fuchsia-600">
+                    98%
+                </h3>
+
+                <p class="mt-3 text-slate-600
+                          dark:text-slate-300">
+                    Satisfaction Rate
+                </p>
+
+            </div>
+
+            <div class="text-center
+                        bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        border border-slate-200
+                        dark:border-white/10">
+
+                <h3 class="text-5xl font-black
+                           text-cyan-600">
+                    6+
+                </h3>
+
+                <p class="mt-3 text-slate-600
+                          dark:text-slate-300">
+                    Years Experience
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- TESTIMONIALS -->
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-gradient-to-b
+                from-slate-50
+                via-white
+                to-slate-50
+                dark:from-slate-900
+                dark:via-slate-950
+                dark:to-slate-900">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                💬 Testimonials
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                What Our Clients
+              <span class="bg-gradient-to-r
+                                 from-violet-500
+                                 via-purple-500
+                                 to-fuchsia-500
+                                 bg-clip-text
+                                 text-transparent"> Say About Us</span>
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Thousands of homeowners trust us to
+                transform their spaces into organized,
+                functional, and stress-free environments.
+
+            </p>
+
+        </div>
+
+        <!-- Testimonial Cards -->
+        <div class="grid lg:grid-cols-3 gap-8 mt-16">
+
+            <!-- Card -->
+            <div class="bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+                <div class="flex text-yellow-400 text-xl">
+                    ★★★★★
+                </div>
+
+                <p class="mt-5 text-slate-600
+                          dark:text-slate-300">
+
+                    "The team completely transformed
+                    our home office and storage areas.
+                    Everything now has its place."
+
+                </p>
+
+                <div class="flex items-center gap-4 mt-6">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                        class="w-14 h-14 rounded-full object-cover"
+                        alt="Client">
+
+                    <div>
+
+                        <h4 class="font-bold
+                                   text-slate-900
+                                   dark:text-white">
+
+                            Sarah Wilson
+
+                        </h4>
+
+                        <p class="text-sm text-slate-500">
+                            Homeowner
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card -->
+            <div class="bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+                <div class="flex text-yellow-400 text-xl">
+                    ★★★★★
+                </div>
+
+                <p class="mt-5 text-slate-600
+                          dark:text-slate-300">
+
+                    "Their personalized organizing
+                    plan helped us reduce clutter
+                    and save so much time to me success."
+
+                </p>
+
+                <div class="flex items-center gap-4 mt-6">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+                        class="w-14 h-14 rounded-full object-cover"
+                        alt="Client">
+
+                    <div>
+
+                        <h4 class="font-bold
+                                   text-slate-900
+                                   dark:text-white">
+
+                            David Carter
+
+                        </h4>
+
+                        <p class="text-sm text-slate-500">
+                            Entrepreneur
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card -->
+            <div class="bg-white/80
+                        dark:bg-white/5
+                        backdrop-blur-md
+                        rounded-3xl
+                        p-8
+                        border border-slate-200
+                        dark:border-white/10
+                        shadow-xl">
+
+                <div class="flex text-yellow-400 text-xl">
+                    ★★★★★
+                </div>
+
+                <p class="mt-5 text-slate-600
+                          dark:text-slate-300">
+
+                    "The virtual consultation and
+                    dashboard made the entire process
+                    simple and stress-free."
+
+                </p>
+
+                <div class="flex items-center gap-4 mt-6">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+                        class="w-14 h-14 rounded-full object-cover"
+                        alt="Client">
+
+                    <div>
+
+                        <h4 class="font-bold
+                                   text-slate-900
+                                   dark:text-white">
+
+                            Emma Roberts
+
+                        </h4>
+
+                        <p class="text-sm text-slate-500">
+                            Interior Designer
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FAQ SECTION -->
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0
+                bg-white
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center">
+
+            <span class="inline-flex items-center gap-2
+                         px-4 py-2 rounded-full
+                         bg-violet-100
+                         dark:bg-violet-500/10
+                         text-violet-700
+                         dark:text-violet-300
+                         text-sm font-semibold">
+
+                ❓ FAQ
+
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl
+                       font-black
+                       text-slate-900
+                       dark:text-white">
+
+                Frequently Asked Questions
+
+            </h2>
+
+            <p class="mt-5 text-lg
+                      text-slate-600
+                      dark:text-slate-300">
+
+                Everything you need to know about our
+                home organization and decluttering services.
+
+            </p>
+
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="mt-16 space-y-5">
+
+            <details class="group bg-white/80 dark:bg-white/5
+                            rounded-3xl p-6
+                            border border-slate-200
+                            dark:border-white/10">
+
+                <summary class="flex justify-between items-center
+                                cursor-pointer
+                                font-bold
+                                text-slate-900
+                                dark:text-white">
+
+                    How does the home organization process work?
+
+                    <span class="group-open:rotate-45 transition">
+                        +
+                    </span>
+
+                </summary>
+
+                <p class="mt-4 text-slate-600 dark:text-slate-300">
+                    We assess your space, create a personalized
+                    plan, organize each area, and provide
+                    maintenance guidance.
+                </p>
+
+            </details>
+
+            <details class="group bg-white/80 dark:bg-white/5
+                            rounded-3xl p-6
+                            border border-slate-200
+                            dark:border-white/10">
+
+                <summary class="flex justify-between items-center
+                                cursor-pointer
+                                font-bold
+                                text-slate-900
+                                dark:text-white">
+
+                    Do you offer virtual consultations?
+
+                    <span class="group-open:rotate-45 transition">
+                        +
+                    </span>
+
+                </summary>
+
+                <p class="mt-4 text-slate-600 dark:text-slate-300">
+                    Yes. We offer remote consultations
+                    through video meetings and online planning.
+                </p>
+
+            </details>
+
+            <details class="group bg-white/80 dark:bg-white/5
+                            rounded-3xl p-6
+                            border border-slate-200
+                            dark:border-white/10">
+
+                <summary class="flex justify-between items-center
+                                cursor-pointer
+                                font-bold
+                                text-slate-900
+                                dark:text-white">
+
+                    Can I track project progress online?
+
+                    <span class="group-open:rotate-45 transition">
+                        +
+                    </span>
+
+                </summary>
+
+                <p class="mt-4 text-slate-600 dark:text-slate-300">
+                    Absolutely. Our dashboard allows you to
+                    upload photos, review plans, and track progress.
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- CTA SECTION -->
+
+<section class="relative py-24 overflow-hidden">
+
+    <!-- Page Background -->
+    <div class="absolute inset-0
+                bg-slate-50
+                dark:bg-slate-950">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Rounded CTA Card -->
+        <div class="relative overflow-hidden
+            rounded-[40px]
+            md:rounded-[50px]
+            p-10 md:p-20
+            text-center
+            shadow-2xl
+
+            bg-gradient-to-r
+            from-violet-100
+            via-purple-50
+            to-fuchsia-100
+
+            dark:from-violet-600
+            dark:via-purple-600
+            dark:to-fuchsia-600">
+
+            <!-- Glow -->
+            <div class="absolute -top-20 -left-20
+                        w-72 h-72
+                        bg-white/10
+                        rounded-full
+                        blur-3xl">
+            </div>
+
+            <div class="absolute -bottom-20 -right-20
+                        w-72 h-72
+                        bg-white/10
+                        rounded-full
+                        blur-3xl">
+            </div>
+
+            <div class="relative">
+
+                <!-- Badge -->
+               <span class="inline-flex items-center gap-2
+             px-5 py-2 rounded-full
+
+             bg-white/80
+             text-violet-700
+
+             dark:bg-white/20
+             dark:text-white
+
+             backdrop-blur-md
+             text-sm font-semibold">
+
+    ✨ Free Consultation Available
+
+</span>
+
+                <!-- Heading -->
+               <h2 class="mt-8
+           text-4xl md:text-6xl
+           font-black leading-tight
+
+           text-slate-900
+           dark:text-white">
+
+    Ready To Organize
+
+    <span class="block">
+        Your Home?
+    </span>
+
+</h2>
+
+                <!-- Description -->
+               <p class="mt-6 max-w-2xl mx-auto
+          text-lg md:text-xl
+
+          text-slate-600
+          dark:text-violet-100">
+
+    Let our experts create a customized
+    organization plan that transforms
+    clutter into calm.
+
+</p>
+
+                <!-- Buttons -->
+                <div class="mt-10 flex flex-wrap
+                            justify-center gap-4">
+
+                    <a href="#"
+   class="px-8 py-4 rounded-2xl
+
+          bg-violet-600
+          text-white
+
+          dark:bg-white
+          dark:text-violet-700
+
+          font-bold
+          shadow-xl
+          hover:scale-105
+          transition-all">
+          
+
+    Book Consultation
+
+</a>
+
+                  <a href="#"
+   class="px-8 py-4 rounded-2xl
+
+          bg-white/70
+          text-violet-700
+          border border-violet-300
+
+          dark:bg-white/10
+          dark:text-white
+          dark:border-white/20
+
+          backdrop-blur-md
+          font-semibold
+          hover:scale-105
+          transition-all">
+
+    View Dashboard
+
+</a>
+
+                </div>
+
+                <!-- Stats -->
+                <div class="grid sm:grid-cols-3 gap-5 mt-14">
+
+                    <div class="rounded-2xl
+            p-5
+            backdrop-blur-md
+
+            bg-white/80
+            dark:bg-white/10">
+
+    <h3 class="text-3xl font-black
+               text-violet-700
+               dark:text-white">
+        5K+
+    </h3>
+
+    <p class="mt-1
+              text-slate-600
+              dark:text-violet-100">
+        Happy Clients
+    </p>
+
+</div>
+
+                    <div class="rounded-2xl
+            p-5
+            backdrop-blur-md
+
+            bg-white/80
+            dark:bg-white/10">
+
+                        <h3 class="text-3xl font-black
+               text-violet-700
+               dark:text-white">
+                            12K+
+                        </h3>
+
+                        <p class="mt-1
+              text-slate-600
+              dark:text-violet-100">
+                            Rooms Organized
+                        </p>
+
+                    </div>
+
+                    <div class="rounded-2xl
+            p-5
+            backdrop-blur-md
+
+            bg-white/80
+            dark:bg-white/10">
+
+                        <h3 class="text-3xl font-black
+               text-violet-700
+               dark:text-white">
+                            98%
+                        </h3>
+
+                        <p class="mt-1
+              text-slate-600
+              dark:text-violet-100">
+                            Satisfaction Rate
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+ <footer class="relative overflow-hidden bg-white
+dark:bg-slate-950">
+
+    
+
+    <!-- Glow Effects -->
+    <div class="absolute top-0 left-0 w-80 h-80
+                bg-violet-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="absolute bottom-0 right-0 w-80 h-80
+                bg-purple-600/20
+                blur-3xl rounded-full">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- Top Footer -->
+        <div class="grid lg:grid-cols-4 gap-12 py-20">
+
+            <!-- Brand -->
+            <div>
+
+                <div class="flex items-center gap-3">
+
+                    <div class="w-12 h-12 rounded-2xl
+                                bg-gradient-to-br
+                                from-violet-500
+                                to-purple-600
+                                flex items-center justify-center
+                                text-white text-xl">
+
+                    <img src="/assets/images/cleaning.png" alt="Logo" class="w-6 h-6">
+
+                    </div>
+
+                    <h3 class="text-xl font-black  text-violet-700 dark:text-white">
+                        Home Organizer
+                    </h3>
+
+                </div>
+
+                <p class="mt-6 text-slate-900 dark:text-white leading-relaxed">
+
+                    Professional home organization and
+                    decluttering solutions that transform
+                    everyday spaces into peaceful,
+                    functional environments.
+
+                </p>
+
+                <!-- Social -->
+             <div class="flex gap-4 mt-8">
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <a href="#"
+       class="w-11 h-11 rounded-xl
+              bg-slate-100
+              dark:bg-white/10
+              text-slate-700
+              dark:text-white
+              flex items-center justify-center
+              hover:bg-violet-600
+              hover:text-white
+              hover:-translate-y-1
+              transition-all duration-300">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+   
+
+</div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h4 class="text-lg font-bold text-violet-700 dark:text-white">
+                    Quick Links
+                </h4>
+
+                <ul class="mt-6 space-y-4 ">
+
+                    <li >
+                        <a href="#"
+                           class= "text-slate-900 dark:text-white  hover:text-violet-400  transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white  hover:text-violet-400 transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="  text-slate-900 dark:text-white  hover:text-violet-400 transition">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div>
+
+                <h4 class="text-lg font-bold text-violet-700 dark:text-white">
+                    Services
+                </h4>
+
+                <ul class="mt-6 space-y-4">
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Kitchen Organization
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Closet Makeovers
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Home Office Setup
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Garage Organization
+                    </li>
+
+                    <li class=" text-slate-900 dark:text-white">
+                        Full Home Decluttering
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+
+                <h4 class="text-lg font-bold  text-violet-700 dark:text-white"">
+                    Stay Updated
+                </h4>
+
+                <p class="mt-6  text-slate-900 dark:text-white">
+
+                    Get organizing tips, storage ideas,
+                    and exclusive offers delivered
+                    directly to your inbox.
+
+                </p>
+
+                <form class="mt-6 ">
+
+                    <input
+                        type="email"
+                        placeholder="Your Email Address"
+                        class="w-full px-5 py-4 rounded-2xl
+                               bg-white/10
+                               border border-white/10
+                               text-white
+                               placeholder-slate-600
+                               focus:outline-none
+                               focus:border-violet-500">
+
+                    <button
+                        class="w-full mt-4 py-4 rounded-2xl
+                               bg-gradient-to-r
+                               from-violet-600
+                               to-purple-600
+                               text-white
+                               font-semibold">
+
+                        Subscribe Now
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-white/10
+                    py-8">
+
+            <div class="flex flex-col md:flex-row
+                        items-center justify-between
+                        gap-4">
+
+                <p class=" text-slate-900 dark:text-white text-center md:text-left">
+
+                    © 2026 Home Organizer. All rights reserved.
+
+                </p>
+
+                <div class="flex gap-6">
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Terms of Service
+                    </a>
+
+                    <a href="#"
+                       class=" text-slate-900 dark:text-white hover:text-violet-400 transition">
+                        Cookies
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
